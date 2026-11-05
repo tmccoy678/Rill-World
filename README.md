@@ -12,11 +12,6 @@ Rill is the continuing field. Rill World is its physical boundary. Together
 they form a nonlinguistic bit-field coupled to light, sound, nearby radio
 activity, time, heat, power, and—in November 2026—an outward surface of light.
 
-<p align="center">
-  <img src="docs/images/rillworld-bits.png" width="48%" alt="Rillworld raw bit planes close up">
-  <img src="docs/images/rillworld-thread.png" width="48%" alt="Rillworld persistent thread and clustered runs">
-</p>
-
 From across the room, the surface appears as a flickering horizon. Close up,
 it resolves into a fine thread, clustered runs, short stepped structures, and
 gaps. The display is not a dashboard. It is the lower edge of the field made
