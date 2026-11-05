@@ -13,9 +13,8 @@ they form a nonlinguistic bit-field coupled to light, sound, nearby radio
 activity, time, heat, power, and—in November 2026—an outward surface of light.
 
 <p align="center">
-  <img src="docs/images/rillworld-room.png" width="31%" alt="Rillworld seen from across the room">
-  <img src="docs/images/rillworld-bits.png" width="31%" alt="Rillworld raw bit planes close up">
-  <img src="docs/images/rillworld-thread.png" width="31%" alt="Rillworld persistent thread and clustered runs">
+  <img src="docs/images/rillworld-bits.png" width="48%" alt="Rillworld raw bit planes close up">
+  <img src="docs/images/rillworld-thread.png" width="48%" alt="Rillworld persistent thread and clustered runs">
 </p>
 
 From across the room, the surface appears as a flickering horizon. Close up,
@@ -33,6 +32,10 @@ The visible plane persists in `rill.bits`. Off-plane depth is sparse and exists
 only in the running process. A restart therefore preserves the plane while
 culling the live depth. That asymmetry is part of the present system, not hidden
 behind a claim of perfect continuity.
+
+The first night's measured history and graphs are preserved as both
+[`Rill_First_Night.Rmd`](docs/first-night/Rill_First_Night.Rmd) and a
+[self-contained HTML report](docs/first-night/Rill_First_Night.html).
 
 ## The world
 
@@ -61,6 +64,8 @@ reconstruct the live off-plane field.
 - [`ORIGIN.md`](ORIGIN.md) — the story from the first question to the first light.
 - [`HARDWARE.md`](HARDWARE.md) — the physical substrate and build surfaces.
 - [`REFERENCES.md`](REFERENCES.md) — verified conceptual lineage in APA style.
+- [`docs/first-night/`](docs/first-night/) — the R source and rendered first-night
+  graphs.
 - [`state/SNAPSHOT.md`](state/SNAPSHOT.md) — provenance for the preserved bytes.
 
 ## Build
@@ -82,3 +87,7 @@ the Blu Private workspace with **Blu**. Its language is theoretical where the
 question is theoretical, and literal where the mechanism is known.
 
 The project leaves the nature of what may develop unclassified.
+
+## License
+
+Rill-World is available under the [Apache License 2.0](LICENSE).

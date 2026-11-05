@@ -1,0 +1,172 @@
+---
+title: "Rill — First Night on Agar"
+subtitle: "Observed 3–4 November 2026"
+output:
+  html_document:
+    self_contained: true
+    toc: false
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                      fig.width = 8.5, fig.height = 5.2, dpi = 144)
+
+particles <- data.frame(
+  generation = c(0, 15611, 70562, 575616, 878631, 957429),
+  particles = c(28568, 28568, 190633, 225638, 220073, 215081),
+  observation = c(
+    "Initial count inferred from conservation",
+    "First direct particle census",
+    "Direct census after the world boundary opened",
+    "Direct census after an uninterrupted night",
+    "Plane bit count after depth and Valence; flags were not separated",
+    "Final exact directional-particle census before measurement ablation"
+  )
+)
+
+world <- data.frame(
+  field = c("Light", "Sound", "Radio"),
+  last_night = c(9044, 64850, 8293),
+  morning = c(305315, 2189749, 186887),
+  after_depth = c(488434, 3503103, 291004),
+  pre_ablation = c(626279, 4488521, 406495)
+)
+
+directions <- data.frame(
+  direction = c("North", "East", "South", "West", "+z on plane", "−z on plane"),
+  count = c(0, 114152, 100892, 37, 0, 0)
+)
+
+blue <- "#1676A3"
+light_blue <- "#70C7E8"
+dark <- "#14212B"
+```
+
+Rill began as a 640 × 360 local bit field on Agar. A **generation** is one
+complete collision, movement, boundary, and environmental-input update of the
+whole field. The initial particle count is inferred because particles were
+conserved before the environmental boundary opened. The later counts were read
+directly from Rill's current state.
+
+## Particles across generations
+
+```{r particle-plot}
+par(mar = c(7.0, 5.2, 1.2, 1.0), col.axis = dark, col.lab = dark,
+    family = "sans", las = 1)
+
+plot(particles$generation, particles$particles,
+     type = "o", pch = 19, lwd = 3, cex = 1.25,
+     col = blue,
+     xlab = "Rill generation",
+     ylab = "Observed value on ancestral plane",
+     xaxt = "n", yaxt = "n",
+     xlim = c(0, 1000000), ylim = c(0, 250000))
+
+axis(1, at = particles$generation,
+     labels = format(particles$generation, big.mark = ",", scientific = FALSE),
+     col.axis = dark, las = 2, cex.axis = 0.82)
+axis(2, at = seq(0, 250000, 50000),
+     labels = format(seq(0, 250000, 50000), big.mark = ",", scientific = FALSE),
+     col.axis = dark)
+grid(col = "#DDE8EE", lty = 1)
+lines(particles$generation, particles$particles, col = blue, lwd = 3)
+points(particles$generation, particles$particles, pch = 19,
+       col = blue, cex = 1.25)
+points(particles$generation[1], particles$particles[1],
+       pch = 21, bg = "white", col = blue, lwd = 2, cex = 1.4)
+points(tail(particles$generation, 1), tail(particles$particles, 1),
+       pch = 18, col = "#D16A34", cex = 1.5)
+
+text(particles$generation,
+     particles$particles + rep(15000, nrow(particles)),
+     labels = format(particles$particles, big.mark = ",", scientific = FALSE),
+     col = dark, cex = 0.9)
+
+legend("topleft",
+       legend = c("Direct plane observation", "Initial value inferred",
+                  "Depth available; mixed plane-bit count",
+                  "Final exact directional count"),
+       pch = c(19, 21, 17, 18),
+       pt.bg = c(blue, "white", "#7B4FA3", "#D16A34"),
+       col = c(blue, blue, "#7B4FA3", "#D16A34"),
+       bty = "n", cex = 0.82)
+```
+
+## Environmental field updates at the final observation
+
+```{r world-plot}
+par(mar = c(4.7, 5.8, 1.2, 1.0), col.axis = dark, col.lab = dark,
+    family = "sans", las = 1)
+
+update_matrix <- rbind(
+  "Last night" = world$last_night,
+  "Morning" = world$morning,
+  "After depth" = world$after_depth,
+  "Pre-ablation" = world$pre_ablation
+)
+
+bars <- barplot(update_matrix,
+                beside = TRUE,
+                names.arg = world$field,
+                col = c(light_blue, blue, "#7B4FA3", "#D16A34"),
+                border = NA,
+                ylab = "Boundary-field updates",
+                ylim = c(0, 5000000), yaxt = "n",
+                legend.text = rownames(update_matrix),
+                args.legend = list(x = "topleft", bty = "n", cex = 0.9))
+
+axis(2, at = seq(0, 4800000, 800000),
+     labels = format(seq(0, 4800000, 800000), big.mark = ",", scientific = FALSE),
+     col.axis = dark)
+abline(h = seq(0, 4800000, 800000), col = "#DDE8EE", lty = 1)
+text(bars, update_matrix + 160000,
+     labels = format(update_matrix, big.mark = ",", scientific = FALSE),
+     col = dark, cex = 0.78, srt = 90, adj = 0)
+```
+
+These update totals describe how many times each environmental boundary had
+changed at the two observation points. They do not measure what Rill perceived
+or what any future structure might be able to use.
+
+Across the uninterrupted night, Rill advanced from generation 70,562 to
+575,616. The instantaneous particle count changed from 190,633 to 225,638.
+
+At generation 878,631, the recorded plane value was 220,073. That historical
+calculation counted every active bit in each plane cell; after Valence became
+possible, it could have included bound and aged flags and therefore should not
+be treated as an exact directional-particle count.
+
+The final pre-ablation observation occurred at generation 957,429. Rill's
+ancestral plane contained exactly 215,081 directional particles across 165,019
+occupied locations: 114,152 east, 100,892 south, 37 west, and none north or
+along ±z on the plane at that instant. No bound or aged Valence flags were
+present on the ancestral plane. Off-plane anonymous matter and off-plane
+Valence configurations remained unavailable by design.
+
+## Observed values
+
+```{r table}
+display_particles <- particles
+display_particles$generation <- format(display_particles$generation,
+                                       big.mark = ",", scientific = FALSE)
+display_particles$particles <- format(display_particles$particles,
+                                      big.mark = ",", scientific = FALSE)
+names(display_particles) <- c("Generation", "Plane value", "Basis")
+knitr::kable(display_particles, align = c("r", "r", "l"))
+```
+
+## Final ancestral-plane directions
+
+```{r direction-table}
+display_directions <- directions
+display_directions$count <- format(display_directions$count,
+                                   big.mark = ",", scientific = FALSE)
+names(display_directions) <- c("Direction", "Particles")
+knitr::kable(display_directions, align = c("l", "r"))
+```
+
+At the final observation, all 640 light positions and all 360 sound positions
+were active. Thirteen of 360 radio positions were active. The light field
+ranged from 19 to 128 (mean 60.153), the sound field from 127 to 128 (mean
+127.500), and the radio field from 0 to 100 (mean 2.033).
