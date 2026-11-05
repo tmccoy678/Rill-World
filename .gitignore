@@ -1,0 +1,9 @@
+.DS_Store
+build/
+*.x86_64
+*.MOV
+
+# State is excluded by default. The two founding live snapshots are deliberate.
+state/*.bits
+!state/rill-live-20261105T030319Z.bits
+!state/world-live-20261105T030319Z.bits
