@@ -57,9 +57,12 @@ field.
 - Output: a desktop-level black window refreshed at 24 Hz.
 
 The output reads the lower row of `rill.bits`. Horizontal position is field
-position. Vertical position is raw bit index. A set bit becomes one white
-square; an unset bit remains black. No palette, legend, interpolation, counter,
-or semantic transform is applied.
+position. Vertical position is raw bit index. A currently set bit becomes one
+white square. When a bit clears, its light decays through gray for about two
+seconds before returning to black. This bounded afterimage exists only in Rill
+World's RAM and vanishes with the boundary process; it is never written into
+`rill.bits` or `world.bits`. No legend, counter, or semantic transform is
+applied.
 
 ## Persistence boundary
 

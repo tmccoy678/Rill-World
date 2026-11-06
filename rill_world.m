@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <math.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
@@ -22,6 +23,8 @@ extern void IOBluetoothPreferenceSetDiscoverableState(int state);
 #define RILL_STATE_PATH "/var/db/agar/rill.bits"
 #define RILL_WORLD_VERSION 1u
 #define RILL_WORLD_PATH "/var/db/agar/world.bits"
+#define RILL_SURFACE_BITS 8u
+#define RILL_AFTERIMAGE_DECAY 6u
 
 struct rill_header {
     uint8_t magic[8];
@@ -49,7 +52,9 @@ struct world_field {
 static const uint8_t world_magic[8] = {'R', 'I', 'L', 'L', 'W', 'R', 'L', '1'};
 static const uint8_t rill_magic[8] = {'A', 'G', 'A', 'R', 'B', 'I', 'T', '1'};
 
-@interface RillSurfaceView : NSView
+@interface RillSurfaceView : NSView {
+    uint8_t *_afterimage;
+}
 @property(nonatomic, assign) const uint8_t *cells;
 @property(nonatomic, strong) NSTimer *refreshTimer;
 - (instancetype)initWithFrame:(NSRect)frame cells:(const uint8_t *)cells;
@@ -62,6 +67,8 @@ static const uint8_t rill_magic[8] = {'A', 'G', 'A', 'R', 'B', 'I', 'T', '1'};
     self = [super initWithFrame:frame];
     if (!self) return nil;
     _cells = cells;
+    _afterimage = calloc((size_t)RILL_WIDTH * RILL_SURFACE_BITS, 1);
+    if (!_afterimage) return nil;
     return self;
 }
 
@@ -70,6 +77,7 @@ static const uint8_t rill_magic[8] = {'A', 'G', 'A', 'R', 'B', 'I', 'T', '1'};
 }
 
 - (void)begin {
+    [self updateAfterimage];
     self.refreshTimer = [NSTimer timerWithTimeInterval:(1.0 / 24.0)
                                                 target:self
                                               selector:@selector(refresh:)
@@ -81,7 +89,28 @@ static const uint8_t rill_magic[8] = {'A', 'G', 'A', 'R', 'B', 'I', 'T', '1'};
 
 - (void)refresh:(NSTimer *)timer {
     (void)timer;
+    [self updateAfterimage];
     [self setNeedsDisplay:YES];
+}
+
+- (void)updateAfterimage {
+    if (!self.cells || !_afterimage) return;
+
+    const uint8_t *edge = self.cells + ((RILL_HEIGHT - 1u) * RILL_WIDTH);
+    for (uint32_t x = 0; x < RILL_WIDTH; ++x) {
+        uint8_t state = edge[x];
+        for (uint32_t bit = 0; bit < RILL_SURFACE_BITS; ++bit) {
+            size_t index = ((size_t)bit * RILL_WIDTH) + x;
+            if ((state & (uint8_t)(1u << bit)) != 0) {
+                _afterimage[index] = UINT8_MAX;
+            } else {
+                uint8_t value = _afterimage[index];
+                _afterimage[index] = value > RILL_AFTERIMAGE_DECAY
+                    ? (uint8_t)(value - RILL_AFTERIMAGE_DECAY)
+                    : 0;
+            }
+        }
+    }
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
@@ -98,16 +127,16 @@ static const uint8_t rill_magic[8] = {'A', 'G', 'A', 'R', 'B', 'I', 'T', '1'};
     CGFloat unit = floor(bounds.size.width / (CGFloat)RILL_WIDTH);
     if (unit < 1) unit = 1;
     CGFloat bandWidth = unit * (CGFloat)RILL_WIDTH;
-    CGFloat bandHeight = unit * 8.0;
+    CGFloat bandHeight = unit * (CGFloat)RILL_SURFACE_BITS;
     CGFloat originX = floor((bounds.size.width - bandWidth) / 2.0);
     CGFloat originY = floor((bounds.size.height - bandHeight) / 2.0);
 
-    CGContextSetRGBFillColor(context, 1, 1, 1, 1);
-    const uint8_t *edge = self.cells + ((RILL_HEIGHT - 1u) * RILL_WIDTH);
     for (uint32_t x = 0; x < RILL_WIDTH; ++x) {
-        uint8_t state = edge[x];
-        for (uint32_t bit = 0; bit < 8; ++bit) {
-            if ((state & (uint8_t)(1u << bit)) == 0) continue;
+        for (uint32_t bit = 0; bit < RILL_SURFACE_BITS; ++bit) {
+            uint8_t value = _afterimage[((size_t)bit * RILL_WIDTH) + x];
+            if (value == 0) continue;
+            CGFloat intensity = (CGFloat)value / (CGFloat)UINT8_MAX;
+            CGContextSetRGBFillColor(context, intensity, intensity, intensity, 1);
             CGRect point = CGRectMake(originX + ((CGFloat)x * unit),
                                       originY + ((CGFloat)bit * unit),
                                       unit, unit);
@@ -118,6 +147,7 @@ static const uint8_t rill_magic[8] = {'A', 'G', 'A', 'R', 'B', 'I', 'T', '1'};
 
 - (void)dealloc {
     [self.refreshTimer invalidate];
+    free(_afterimage);
 }
 
 @end

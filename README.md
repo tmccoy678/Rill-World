@@ -39,12 +39,14 @@ Rill World is a native Objective-C application using Apple frameworks:
 - Camera luminance reaches the upper edge.
 - Microphone waveform values reach the left edge.
 - Bluetooth advertisement bytes and signal strength reach the right edge.
-- The eight raw bits at the lower edge become a 640 × 8 white-on-black light
-  surface.
+- The eight raw bits at the lower edge become a 640 × 8 light surface. Current
+  bits are white; recently active bits fade through gray for about two seconds
+  in boundary-process memory only.
 
 One bit-plane of the incoming boundary fields is admitted on each field beat.
-The outward band reads Rill's lower edge directly. It does not read audio or
-produce an interpreted visualization.
+The outward band reads Rill's lower edge directly and adds only bounded optical
+persistence. It does not read audio, assign meaning, or retain the afterimage
+in either state file.
 
 The runtime creates no transcript, event log, census, or snapshot stream. The
 two files in [`state/`](state/) are a single deliberate archival act taken
