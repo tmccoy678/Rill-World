@@ -11,10 +11,11 @@ gate or assigning a higher-level function?
 
 ## Conceptual primitive
 
-The trial must begin with an effective Level 0 site representation. Exact state
-variables and equations remain unresolved. Candidate quantities may include
-capacity, occupancy, potential, permeability, excitation, resistance, and
-bounded fluctuation.
+The trial begins with the effective Level 0 site representation specified in
+`EQUATIONS.md`: two conserved unnamed contents, finite unoccupied capacity,
+local potentials, local cohesion, local competition, bounded fluctuation, and
+conservative nearest-neighbor transfer. Permeability is a present local
+relation, not an initialized site identity.
 
 ## Required emergence
 
@@ -71,7 +72,8 @@ possibilities impossible.
 - no semantic runtime log;
 - no root launch.
 
-## Required next document
+## Required next decision
 
-`EQUATIONS.md` must define conservation, dissipation, fluctuation,
-neighborhood, transfer, permeability, and persistence before any code is added.
+Review `EQUATIONS.md` as the candidate's effective Level 0 physics. No code is
+added until its conserved quantities, local asymmetry, transfer law, and claim
+boundary are accepted without relying on a desired visual result.
