@@ -67,6 +67,9 @@ reconstruct the live off-plane field.
 - [`ORIGIN.md`](ORIGIN.md) — the story from the first question to the first light.
 - [`CONSTITUTION.md`](CONSTITUTION.md) — the non-prescriptive body, medium,
   circulation, inheritance, observation, and lineage commitments.
+- [`COMPARATIVE-CIRCULATION.md`](COMPARATIVE-CIRCULATION.md) — animal
+  circulation strategies retained as design inspiration rather than runtime
+  labels.
 - [`candidate-physics/`](candidate-physics/) — inactive local primitives and
   unresolved choices for a possible descendant; nothing there is deployed.
 - [`HARDWARE.md`](HARDWARE.md) — the physical substrate and build surfaces.

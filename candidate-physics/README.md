@@ -11,6 +11,9 @@ candidate is deliberately promoted at a lineage boundary.
 See:
 
 - `PRIMITIVES.md` for the allowed local vocabulary and invariants.
+- `AGAR-CONSTRAINTS.md` for the measured Intel memory hierarchy and candidate
+  resource envelope.
+- `SINGLE-FILE-CARRIER.md` for the first bounded mechanical trial.
 - `OPEN-QUESTIONS.md` for choices that remain unresolved and must not be hidden
   inside an implementation.
 
