@@ -65,6 +65,10 @@ reconstruct the live off-plane field.
 - [`rill_world.m`](rill_world.m) — physical inputs and outward light boundary.
 - [`ARCHITECTURE.md`](ARCHITECTURE.md) — exact mechanism and claim boundaries.
 - [`ORIGIN.md`](ORIGIN.md) — the story from the first question to the first light.
+- [`CONSTITUTION.md`](CONSTITUTION.md) — the non-prescriptive body, medium,
+  circulation, inheritance, observation, and lineage commitments.
+- [`candidate-physics/`](candidate-physics/) — inactive local primitives and
+  unresolved choices for a possible descendant; nothing there is deployed.
 - [`HARDWARE.md`](HARDWARE.md) — the physical substrate and build surfaces.
 - [`REFERENCES.md`](REFERENCES.md) — verified conceptual lineage in APA style.
 - [`docs/first-night/`](docs/first-night/) — the R source and rendered first-night
