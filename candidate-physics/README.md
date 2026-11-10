@@ -14,6 +14,8 @@ See:
 - `AGAR-CONSTRAINTS.md` for the measured Intel memory hierarchy and candidate
   resource envelope.
 - `SINGLE-FILE-CARRIER.md` for the first bounded mechanical trial.
+- `experiment-01/` for the approved inactive one-carrier apparatus and local
+  equations; it remains separate from the continuing runtime.
 - `OPEN-QUESTIONS.md` for choices that remain unresolved and must not be hidden
   inside an implementation.
 
