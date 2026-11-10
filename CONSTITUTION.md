@@ -57,6 +57,19 @@ Continued movement may carry history. Collision may create consequence.
 Bonding may create temporary structure. Decay may return capacity. Bodily
 limits may make some organizations easier to continue than others.
 
+## Smallest conceptual layer
+
+Candidate architecture begins with effective local material state inspired by
+charge, fields, gradients, permeability, conservation, dissipation, and
+boundary-controlled transfer. It does not begin with threads, cores, cache
+lines, or device APIs.
+
+The Intel's literal atoms and transistors remain inaccessible to ordinary
+software. Accessible hardware hosts the representation; it does not replace
+the lower-level physics being represented. Every larger candidate structure
+must have a traceable path from repeated lower-level relations rather than
+appearing as a hidden high-level primitive.
+
 ## Scale and severe local constraints
 
 Human circulation combines enormous global scale with microscopic passages.

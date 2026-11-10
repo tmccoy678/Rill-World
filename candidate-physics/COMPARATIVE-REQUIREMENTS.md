@@ -70,13 +70,15 @@ broadcaster is required.
 
 ## Experiment 02 hold
 
-The four-stream Intel trial remains unspecified. Before implementation it must
-state:
+The earlier four-stream whole-body trial is superseded. Experiment 02 begins at
+effective Level 0 and tests whether local state can produce boundary-controlled
+transfer geometry.
 
-1. whether the four streams act as one central driver or as distributed local
-   activity;
-2. which transport modes are present;
-3. whether actual timing can influence valid local order;
-4. how passage gating and smaller-state bypass are represented;
-5. which network changes are permitted;
+Before implementation it must state:
+
+1. the conserved and dissipative quantities;
+2. the neighborhood and transfer equations;
+3. how permeability can change locally;
+4. whether bounded fluctuation is present;
+5. what supports persistence;
 6. which comparative possibilities are intentionally postponed.

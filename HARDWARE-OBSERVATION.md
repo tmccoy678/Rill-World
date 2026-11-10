@@ -91,11 +91,11 @@ small, explicit coupling only after answering:
 
 ## Current consequence
 
-Experiment 02 remains on hold. The systematic comparative pass shows that the
-four logical processors need not act as one central pump or brain. Hardware
-observation must inform the design before the relationship between local
-execution streams, cache-visible state, timing, and distributed transfer is
-specified.
+Experiment 02 is planning-only. Its conceptual architecture begins at effective
+Level 0 rather than at logical processors or cache lines. Hardware observation
+constrains the implementation surface, timing, and later coupling, but does not
+replace the local material-like physics being represented. No root or
+four-stream run is authorized by the current plan.
 
 ## Reference
 

@@ -59,13 +59,11 @@ adjacency relation.
 ## Experiment 02 consequence
 
 Experiment 02 must not equate four logical processors with four independent
-physical body regions. Before implementation it must choose one bounded level:
+physical body regions. Its architecture begins at effective Level 0. Cache-line
+compartments are the first accessible implementation surface, not the first
+conceptual primitive.
 
-- four interleaved activity contexts acting on shared local state;
-- two physical execution regions exchanging through shared state;
-- repeated graphics-style arrays;
-- cache-line compartments and coherence transfer;
-- or another explicitly justified level.
-
-Only one level should be tested in the bounded trial. The others remain
-unimplemented possibilities.
+The initial bounded trial tests only the transition from local material-like
+state to boundary-controlled transfer geometry. Higher hardware levels remain
+implementation constraints and future possibilities rather than candidate
+starting assumptions.

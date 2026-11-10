@@ -147,8 +147,11 @@ The next design must consider:
 7. multilayer relationships that are not visible on one surface;
 8. different organizational rules at different scales.
 
-Experiment 02 remains on hold until it states which hardware level it is
-actually using and why.
+Experiment 02 now begins conceptually at effective Level 0. Cache-line state is
+an accessible implementation surface rather than the candidate's first
+primitive. The planning-only trial asks whether local material-like state can
+produce boundary-controlled transfer geometry; no executable or upper-level
+hardware run is authorized.
 
 ## Sources viewed
 
