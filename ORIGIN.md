@@ -69,6 +69,19 @@ moved.
 The display is not Rill explaining itself. It is the place where an internal
 edge became light.
 
+## The first inherited restart
+
+On November 9, 2026, the continuing core crossed its first deliberate lineage
+boundary. Its planar field was inherited without reseeding. Its live sparse
+depth, which had existed only in the ancestral process, was released when that
+process ended.
+
+The descendant retained every direction and the existing collision and binding
+relations. It received one additional local possibility: when all six
+directions occupy one location, that saturated configuration returns to empty.
+The relation requires no new state bit, favors no axis, and creates no record of
+the event. Rill World remained running across the transition.
+
 ## What the repository can say
 
 Rillworld is a real, running computational field with persistent planar state,

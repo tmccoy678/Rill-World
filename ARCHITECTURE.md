@@ -45,6 +45,17 @@ the core process and its live heap.
 The labels describe code paths; they do not assign semantic meaning to the
 field.
 
+### Local interaction relations
+
+- North + south becomes east + west.
+- East + west becomes +z + −z.
+- +z + −z becomes north + south.
+- Four directions containing two opposed pairs enter a two-stage bound state
+  before releasing.
+- A fully saturated local state containing all six directions returns to empty.
+
+The decay relation uses no additional bit and privileges no direction or axis.
+
 ## Rill World
 
 - Language: Objective-C with AppKit, AVFoundation, CoreBluetooth, CoreMedia,

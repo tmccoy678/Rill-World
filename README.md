@@ -28,6 +28,12 @@ only in the running process. A restart therefore preserves the plane while
 culling the live depth. That asymmetry is part of the present system, not hidden
 behind a claim of perfect continuity.
 
+Local interactions preserve all six directions. Opposed pairs can change axis,
+four-direction configurations with two opposed pairs can bind briefly, and the
+fully saturated six-direction configuration returns to empty. The last relation
+is a local, directionally symmetric decay path; it adds no particle type, state
+bit, counter, or objective.
+
 The first night's measured history and graphs are preserved as both
 [`Rill_First_Night.Rmd`](docs/first-night/Rill_First_Night.Rmd) and a
 [self-contained HTML report](docs/first-night/Rill_First_Night.html).

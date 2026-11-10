@@ -5,8 +5,9 @@ BUILD_DIR := build
 RILL := $(BUILD_DIR)/rill
 APP := $(BUILD_DIR)/RillWorld.app
 APP_BIN := $(APP)/Contents/MacOS/rill-world
+INTERACTION_TEST := $(BUILD_DIR)/interaction-test
 
-.PHONY: all verify
+.PHONY: all verify test
 
 all: $(RILL) $(APP_BIN)
 
@@ -31,3 +32,12 @@ verify: all
 	codesign --verify --deep --strict --verbose=2 $(APP)
 	plutil -lint RillWorld-Info.plist local.agar.rill.world.plist \
 		local.agar.rill.plist
+	$(MAKE) test
+
+$(INTERACTION_TEST): tests/interaction_test.c agar_medium.c
+	mkdir -p $(BUILD_DIR)
+	$(CC) -std=c11 -Wall -Wextra -Werror -O2 -arch $(ARCH) \
+		-mmacosx-version-min=$(MACOS_MIN) -o $@ tests/interaction_test.c
+
+test: $(INTERACTION_TEST)
+	$(INTERACTION_TEST)

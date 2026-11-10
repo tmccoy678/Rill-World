@@ -151,6 +151,10 @@ static unsigned opposed_pair_count(uint8_t directions) {
 static uint8_t interact(uint8_t state) {
     uint8_t directions = state & DIRECTION_MASK;
 
+    if (directions == DIRECTION_MASK) {
+        return 0;
+    }
+
     if (state & MATTER_BOUND) {
         if (state & MATTER_AGED) return directions;
         return directions | MATTER_BOUND | MATTER_AGED;
