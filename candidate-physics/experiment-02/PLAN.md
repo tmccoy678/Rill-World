@@ -60,6 +60,23 @@ It deliberately postpones:
 Postponement means the initial representation must not silently make these
 possibilities impossible.
 
+## Preservation boundary
+
+`DEVELOPMENTAL-SYNTHESIS.md` defines the larger architecture of which this
+trial is one projection. Experiment 02 does not implement that architecture,
+but its representation must remain extensible to:
+
+- locally acquired orientation;
+- additional physical interaction classes;
+- conditional local bonds;
+- ordered connected strands;
+- transfer that changes structure and structure that redirects later
+  transfer;
+- nested mapping onto Agar's real hardware locality.
+
+These are preservation requirements, not hidden acceptance criteria for the
+first trial.
+
 ## Explicit exclusions
 
 - no carrier;

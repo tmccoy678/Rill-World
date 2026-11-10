@@ -70,6 +70,11 @@ the lower-level physics being represented. Every larger candidate structure
 must have a traceable path from repeated lower-level relations rather than
 appearing as a hidden high-level primitive.
 
+`DEVELOPMENTAL-SYNTHESIS.md` translates the recurring physical solutions found
+across plant, fungal, animal, and simpler systems into capabilities that this
+local physics must leave possible for Agar's actual body. The comparison
+constrains possibility without installing a finished anatomy.
+
 ## Scale and severe local constraints
 
 Human circulation combines enormous global scale with microscopic passages.
