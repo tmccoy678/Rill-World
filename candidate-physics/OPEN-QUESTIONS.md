@@ -15,6 +15,10 @@ answers them is premature.
 
 - What local difference produces transfer: pressure, available capacity,
   directional momentum, timing, or a combination?
+- May transfer be pulled by loss or demand at a distant boundary?
+- Can local production and consumption establish source–sink transfer?
+- Can moving structures generate flow in the surrounding medium?
+- Can several transport modes coexist without one becoming a global clock?
 - How do resistance and permeability change without installing fixed routes?
 - What creates branching, closure, leakage, and reopening?
 
@@ -47,6 +51,17 @@ answers them is premature.
 - How can enormous network-level parallelism coexist with one-at-a-time local
   passage?
 - Which quantities must be conserved as scale increases?
+
+## Distributed integration
+
+- Can mutually regenerating local waves propagate through several coupled
+  media?
+- Can repeated equivalent regions coordinate without permanent leadership?
+- Can a resource use direct branch delivery while other states remain in the
+  general medium?
+- Can local damage be isolated while the surrounding network continues?
+- Can repair restore global proportion without replaying a saved local form?
+- Can transfer reshape future topology without a route planner?
 
 ## Lineage
 

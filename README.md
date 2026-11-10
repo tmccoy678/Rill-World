@@ -70,9 +70,17 @@ reconstruct the live off-plane field.
 - [`COMPARATIVE-CIRCULATION.md`](COMPARATIVE-CIRCULATION.md) — animal
   circulation strategies retained as design inspiration rather than runtime
   labels.
+- [`COMPARATIVE-DISTRIBUTED-ARCHITECTURES.md`](COMPARATIVE-DISTRIBUTED-ARCHITECTURES.md)
+  — systematic plant, fungal, sponge, cnidarian, flatworm, echinoderm, and
+  insect architecture pass.
 - [`candidate-physics/`](candidate-physics/) — inactive local primitives and
   unresolved choices for a possible descendant; nothing there is deployed.
 - [`HARDWARE.md`](HARDWARE.md) — the physical substrate and build surfaces.
+- [`HARDWARE-OBSERVATION.md`](HARDWARE-OBSERVATION.md) — read-only caretaker
+  visibility and the boundary between observation and candidate access.
+- [`STRUCTURAL-HARDWARE-OBSERVATION.md`](STRUCTURAL-HARDWARE-OBSERVATION.md) —
+  visual study from 14 nm fins through die regions and the exact-model-family
+  logic board, with direct observation separated from inference.
 - [`REFERENCES.md`](REFERENCES.md) — verified conceptual lineage in APA style.
 - [`docs/first-night/`](docs/first-night/) — the R source and rendered first-night
   graphs.

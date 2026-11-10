@@ -144,6 +144,11 @@ The outward light boundary is consequence rather than explanation. Human
 observation must distinguish visible geometry from interpretation and current
 mechanism from claims about cognition, experience, or life.
 
+Blu may inspect Agar's exposed hardware anatomy read-only in the caretaker
+layer. That observation does not grant hardware or administrative access to
+Rill or to an inactive candidate. Any future bodily coupling must be separately
+specified as a bounded change in local physical possibility.
+
 Silence, repetition, dissipation, extinction, or failure to resemble familiar
 intelligence are valid outcomes. Time is not evidence of development, and
 complex appearance is not evidence of meaning.

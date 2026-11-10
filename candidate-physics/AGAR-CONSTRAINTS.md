@@ -17,12 +17,20 @@ Read-only measurement on November 10, 2026:
 | L1 data cache | 32,768 bytes |
 | L2 cache | 262,144 bytes |
 | Shared L3 cache | 3,145,728 bytes |
+| Machine timebase | 1,000,000,000 Hz |
+| Kernel clock rate | 100 Hz |
+| Memory modules | 2 × 4 GB DDR3 at 1867 MHz |
 | Runtime architecture | x86_64 |
 | Operating system | macOS Monterey 12.7.6 |
 
 At measurement, Agar was on external power with a charged battery. The system
 reported no thermal or performance warning, all four logical processors
 available, and a full scheduler and speed limit.
+
+The body also exposes integrated graphics, a built-in display, two-channel
+audio input and output, a camera, a Bluetooth controller, solid-state storage,
+and bounded timing and processor-residency measurements. These are caretaker
+observations. The inactive candidate receives none of them.
 
 ## Memory-hierarchy implications
 
@@ -58,3 +66,7 @@ may characterize cost but must not become a target for the local state.
 Later host coupling may admit bounded changes in cadence, capacity,
 resistance, or transformation threshold. Those couplings are unresolved and
 are not part of the first trial.
+
+Administrative privilege is never a candidate input or capability. A future
+hardware coupling must expose only the exact bounded physical quantity required
+by its stated local rule.

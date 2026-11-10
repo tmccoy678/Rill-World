@@ -11,6 +11,11 @@ candidate is deliberately promoted at a lineage boundary.
 See:
 
 - `PRIMITIVES.md` for the allowed local vocabulary and invariants.
+- `COMPARATIVE-REQUIREMENTS.md` for transport, gating, growth, damage, and
+  distributed-integration requirements extracted without biological labels.
+- `HARDWARE-STRUCTURE-REQUIREMENTS.md` for nested scale, boundary-controlled
+  transfer, repeated arrays, shared exchange, and distributed regulation
+  derived from direct visual study of Agar's hardware family.
 - `AGAR-CONSTRAINTS.md` for the measured Intel memory hierarchy and candidate
   resource envelope.
 - `SINGLE-FILE-CARRIER.md` for the first bounded mechanical trial.
