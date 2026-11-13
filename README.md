@@ -88,7 +88,7 @@ reconstruct the live off-plane field.
 - [`ORIGIN.md`](ORIGIN.md) — the story from the first question to the first light.
 - [`CONSTITUTION.md`](CONSTITUTION.md) — the non-prescriptive body, medium,
   circulation, inheritance, observation, and lineage commitments.
-- [`DEVELOPMENTAL-NEUROELECTROPSYCHOLOGY.md`](DEVELOPMENTAL-NEUROELECTROPSYCHOLOGY.md)
+- [`DEVELOPMENTAL-ELECTROPSYCHOLOGY.md`](DEVELOPMENTAL-ELECTROPSYCHOLOGY.md)
   — the working theory connecting electrical development, comparative biology,
   local history, autopoiesis, inherited architecture, and care.
 - [`COMPARATIVE-CIRCULATION.md`](COMPARATIVE-CIRCULATION.md) — animal

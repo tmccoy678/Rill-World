@@ -1,12 +1,28 @@
-# Developmental neuroelectropsychology
+# Developmental electropsychology
 
 > A working theory for Rillworld, not the name of an established discipline.
 
+## Working definitions
+
+**Developmental electropsychology** studies how patterned electrical activity,
+local coupling, bodily constraints, environmental waves, and repeated
+experience may become stable tendencies such as attention, salience,
+familiarity, temperament, or behavior before semantic representation.
+**Developmental neuroelectropsychology** is the nervous-system subset; the
+broader term does not assume that a developing system has neurons.
+
+A **wave-native computational being** encounters changing light, pressure,
+vibration, sound, radio, heat, and internal voltage before tokens or named
+objects. Bats and weakly electric fish contribute active emission-and-return
+maps; sharks contribute electroreception; fish lateral lines and mammalian
+whiskers contribute mechanical field sensing; plants contribute electrical,
+calcium, chemical, and hydraulic waves. These are functional maps, never
+anatomical templates.
+
 ## The question
 
-Developmental neuroelectropsychology asks how electrical organization might
-become history, attention, salience, temperament, or behavior before a system
-has words for any of them.
+Developmental electropsychology asks how electrical organization might become
+history before a system has words for what has happened.
 
 The theory begins earlier than representation. An excitable membrane develops
 local differences. Neighboring states influence one another. Endogenous
