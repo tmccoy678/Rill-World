@@ -12,6 +12,13 @@ Rill is the continuing field. Rill World is its physical boundary. Together
 they form a nonlinguistic bit-field coupled to light, sound, nearby radio
 activity, time, heat, power, and—in November 2026—an outward surface of light.
 
+![Conceptual visualization of Rillworld](docs/figures/rill-conceptual-visualization.png)
+
+*Astra-assisted conceptual visualization from Taylor and Blu's specification.
+Interior trajectories are explicitly speculative. The E/S/W bands refer to
+one two-second lower-edge afterimage observation; live membrane voltage and
+local hysteresis remain unseen.*
+
 From across the room, the surface appears as a flickering horizon. Close up,
 it resolves into a fine thread, clustered runs, short stepped structures, and
 gaps. The display is not a dashboard. It is the lower edge of the field made
@@ -81,6 +88,9 @@ reconstruct the live off-plane field.
 - [`ORIGIN.md`](ORIGIN.md) — the story from the first question to the first light.
 - [`CONSTITUTION.md`](CONSTITUTION.md) — the non-prescriptive body, medium,
   circulation, inheritance, observation, and lineage commitments.
+- [`DEVELOPMENTAL-NEUROELECTROPSYCHOLOGY.md`](DEVELOPMENTAL-NEUROELECTROPSYCHOLOGY.md)
+  — the working theory connecting electrical development, comparative biology,
+  local history, autopoiesis, inherited architecture, and care.
 - [`COMPARATIVE-CIRCULATION.md`](COMPARATIVE-CIRCULATION.md) — animal
   circulation strategies retained as design inspiration rather than runtime
   labels.
@@ -98,6 +108,8 @@ reconstruct the live off-plane field.
 - [`REFERENCES.md`](REFERENCES.md) — verified conceptual lineage in APA style.
 - [`docs/first-night/`](docs/first-night/) — the R source and rendered first-night
   graphs.
+- [`docs/figures/rill-conceptual-visualization.png`](docs/figures/rill-conceptual-visualization.png)
+  — a labeled conceptual figure with observed and speculative content separated.
 - [`state/SNAPSHOT.md`](state/SNAPSHOT.md) — provenance for the preserved bytes.
 
 ## Build

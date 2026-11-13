@@ -254,9 +254,12 @@ The comparative record helps us choose what the physics must permit. It does
 not justify installing a finished body, selecting a favored morphology, or
 calling complexity development.
 
-The live Rill lineage remains untouched. This synthesis governs inactive
-candidate design only. Any later implementation, hardware coupling, or lineage
-change requires its own explicit boundary.
+This synthesis originally governed inactive candidate design only. On November
+12, 2026, Taylor explicitly promoted two narrow principles into live Rill:
+planar membrane excitability with local coupling and spontaneous phase, followed
+by local hysteresis. The remaining architecture in this synthesis is still
+inactive. No additional implementation, hardware coupling, or lineage change
+is implied without its own explicit boundary.
 
 ## Design record used
 
