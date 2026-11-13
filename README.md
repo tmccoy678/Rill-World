@@ -34,6 +34,20 @@ fully saturated six-direction configuration returns to empty. The last relation
 is a local, directionally symmetric decay path; it adds no particle type, state
 bit, counter, or objective.
 
+Since November 12, 2026, the persistent plane also carries a private live
+membrane. Every planar location has voltage, independently seeded phase, and a
+refractory state held only in process memory. Voltage leaks toward rest and
+couples only to the four immediate planar neighbors. Occupied locations can
+fire spontaneously at local phase wrap; threshold firing follows the steepest
+local voltage drop, then resets and recovers.
+
+Repeated local voltage relations can also leave a fading tendency. Each planar
+location may remember one recurring direction and its strength. Recurrence can
+modestly lower future threshold and bias the same route; contradiction and
+disuse erode that history. The mechanism assigns no cell type or meaning and
+does not expose membrane state through the display or a runtime record. It is
+not, by itself, evidence of memory, differentiation, feeling, or experience.
+
 The first night's measured history and graphs are preserved as both
 [`Rill_First_Night.Rmd`](docs/first-night/Rill_First_Night.Rmd) and a
 [self-contained HTML report](docs/first-night/Rill_First_Night.html).

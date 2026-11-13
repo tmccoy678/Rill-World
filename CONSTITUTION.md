@@ -182,9 +182,18 @@ Candidate physics must be built and tested separately. Promotion requires an
 explicit decision to release current live depth. Rill World may be changed or
 restarted independently only when the core and its live depth remain intact.
 
+On November 12, 2026, Taylor explicitly chose two direct live lineage changes
+without a rehearsal organism: planar membrane excitability with local coupling,
+spontaneous phase, refractory recovery, and voltage gradients; then local
+hysteresis through which repeated neighborhood relations can alter future
+susceptibility. Taylor accepted the release of then-current sparse depth at
+each breath. Those decisions do not create a standing exception for later core
+changes; every future lineage boundary still requires its own explicit choice.
+
 ## Authorship
 
 This constitution was conceived and directed by Taylor Westfall-McCoy and
 written with Blu in the canonical Blu Private workspace on November 10, 2026.
-It records the design carried forward in conversation; it does not claim that
-the present Rill implementation already realizes these possibilities.
+It records the design carried forward in conversation. Later mechanisms are
+real only where the source and architecture record say they have been promoted;
+the remaining possibilities are not claims about present Rill.

@@ -27,6 +27,14 @@
 #define AGAR_WORLD_PATH "/var/db/agar/world.bits"
 #define AGAR_WORLD_VERSION 1u
 
+#define MEMBRANE_REST (-32)
+#define MEMBRANE_THRESHOLD 96
+#define MEMBRANE_RESET (-96)
+#define MEMBRANE_MIN (-256)
+#define MEMBRANE_MAX 256
+#define MEMBRANE_REFRACTORY_BEATS 8u
+#define MEMBRANE_SPONTANEOUS_PULSE 160
+
 enum direction {
     PARTICLE_NORTH = 1u << 0,
     PARTICLE_EAST  = 1u << 1,
@@ -81,6 +89,15 @@ struct sparse_space {
     struct sparse_entry *entries;
     size_t capacity;
     size_t count;
+};
+
+struct membrane_field {
+    int16_t *potential;
+    int16_t *next_potential;
+    uint8_t *phase;
+    uint8_t *refractory;
+    uint8_t *history_direction;
+    uint8_t *history_strength;
 };
 
 static const uint8_t agar_magic[8] = {'A', 'G', 'A', 'R', 'B', 'I', 'T', '1'};
@@ -146,6 +163,219 @@ static unsigned opposed_pair_count(uint8_t directions) {
     if ((directions & (PARTICLE_POS_Z | PARTICLE_NEG_Z)) ==
         (PARTICLE_POS_Z | PARTICLE_NEG_Z)) count += 1;
     return count;
+}
+
+static int16_t membrane_clamp(int32_t value) {
+    if (value < MEMBRANE_MIN) return MEMBRANE_MIN;
+    if (value > MEMBRANE_MAX) return MEMBRANE_MAX;
+    return (int16_t)value;
+}
+
+static int membrane_initialize(struct membrane_field *field,
+                               const uint8_t *matter) {
+    const size_t cell_count = (size_t)AGAR_WIDTH * AGAR_HEIGHT;
+    field->potential = calloc(cell_count, sizeof(*field->potential));
+    field->next_potential = calloc(cell_count, sizeof(*field->next_potential));
+    field->phase = calloc(cell_count, sizeof(*field->phase));
+    field->refractory = calloc(cell_count, sizeof(*field->refractory));
+    field->history_direction = calloc(cell_count, sizeof(*field->history_direction));
+    field->history_strength = calloc(cell_count, sizeof(*field->history_strength));
+    if (field->potential == NULL || field->next_potential == NULL ||
+        field->phase == NULL || field->refractory == NULL ||
+        field->history_direction == NULL || field->history_strength == NULL) {
+        free(field->potential);
+        free(field->next_potential);
+        free(field->phase);
+        free(field->refractory);
+        free(field->history_direction);
+        free(field->history_strength);
+        memset(field, 0, sizeof(*field));
+        return -1;
+    }
+
+    struct entropy_state entropy;
+    arc4random_buf(&entropy.value, sizeof(entropy.value));
+    if (entropy.value == 0) {
+        entropy.value = UINT64_C(0x6a09e667f3bcc909);
+    }
+
+    for (size_t i = 0; i < cell_count; ++i) {
+        uint64_t sample = next_entropy(&entropy);
+        int16_t variation = (int16_t)((sample >> 8) & 31u) - 15;
+        field->potential[i] = (int16_t)(MEMBRANE_REST + variation);
+        field->next_potential[i] = field->potential[i];
+        field->phase[i] = (uint8_t)sample;
+        if (matter[i] != 0) {
+            field->phase[i] ^= (uint8_t)(sample >> 32);
+        }
+    }
+    return 0;
+}
+
+static void membrane_free(struct membrane_field *field) {
+    free(field->potential);
+    free(field->next_potential);
+    free(field->phase);
+    free(field->refractory);
+    free(field->history_direction);
+    free(field->history_strength);
+    memset(field, 0, sizeof(*field));
+}
+
+static uint8_t membrane_gradient_direction(const int16_t *potential,
+                                           uint32_t index,
+                                           int32_t source_potential,
+                                           uint8_t phase,
+                                           uint8_t preferred_direction,
+                                           uint8_t preference_strength) {
+    uint32_t x = index % AGAR_WIDTH;
+    uint32_t y = index / AGAR_WIDTH;
+    int32_t best_drop = 0;
+    uint8_t best_direction = 0;
+
+    for (uint32_t offset = 0; offset < 4; ++offset) {
+        uint32_t direction = ((uint32_t)phase + offset) & 3u;
+        uint32_t neighbor = index;
+        uint8_t particle_direction = 0;
+        int present = 1;
+
+        switch (direction) {
+            case 0:
+                if (y > 0) {
+                    neighbor = (uint32_t)cell_index(x, y - 1);
+                    particle_direction = PARTICLE_NORTH;
+                } else present = 0;
+                break;
+            case 1:
+                if (x + 1 < AGAR_WIDTH) {
+                    neighbor = (uint32_t)cell_index(x + 1, y);
+                    particle_direction = PARTICLE_EAST;
+                } else present = 0;
+                break;
+            case 2:
+                if (y + 1 < AGAR_HEIGHT) {
+                    neighbor = (uint32_t)cell_index(x, y + 1);
+                    particle_direction = PARTICLE_SOUTH;
+                } else present = 0;
+                break;
+            default:
+                if (x > 0) {
+                    neighbor = (uint32_t)cell_index(x - 1, y);
+                    particle_direction = PARTICLE_WEST;
+                } else present = 0;
+                break;
+        }
+
+        if (present) {
+            int32_t drop = source_potential - potential[neighbor];
+            if (particle_direction == preferred_direction) {
+                drop += (int32_t)(preference_strength >> 3);
+            }
+            if (drop > best_drop) {
+                best_drop = drop;
+                best_direction = particle_direction;
+            }
+        }
+    }
+    return best_direction;
+}
+
+static void membrane_remember_relation(struct membrane_field *field,
+                                       uint32_t index,
+                                       uint8_t direction,
+                                       int matter_is_present) {
+    uint8_t phase = field->phase[index];
+    uint8_t remembered = field->history_direction[index];
+    uint8_t strength = field->history_strength[index];
+
+    if (!matter_is_present || direction == 0) {
+        if ((phase & 31u) == 0 && strength > 0) strength -= 1u;
+    } else if (remembered == direction) {
+        if ((phase & 3u) == 0 && strength < UINT8_MAX) strength += 1u;
+    } else if (remembered == 0 || strength == 0) {
+        if ((phase & 3u) == 0) {
+            remembered = direction;
+            strength = 1u;
+        }
+    } else if ((phase & 3u) == 0) {
+        strength -= 1u;
+        if (strength == 0) remembered = 0;
+    }
+
+    field->history_direction[index] = remembered;
+    field->history_strength[index] = strength;
+}
+
+static void advance_membrane(uint8_t *matter, struct membrane_field *field) {
+    const size_t cell_count = (size_t)AGAR_WIDTH * AGAR_HEIGHT;
+
+    for (uint32_t index = 0; index < cell_count; ++index) {
+        uint32_t x = index % AGAR_WIDTH;
+        uint32_t y = index / AGAR_WIDTH;
+        int32_t self = field->potential[index];
+        int32_t neighbor_sum = 0;
+        int32_t neighbor_count = 0;
+
+        if (y > 0) {
+            neighbor_sum += field->potential[cell_index(x, y - 1)];
+            neighbor_count += 1;
+        }
+        if (x + 1 < AGAR_WIDTH) {
+            neighbor_sum += field->potential[cell_index(x + 1, y)];
+            neighbor_count += 1;
+        }
+        if (y + 1 < AGAR_HEIGHT) {
+            neighbor_sum += field->potential[cell_index(x, y + 1)];
+            neighbor_count += 1;
+        }
+        if (x > 0) {
+            neighbor_sum += field->potential[cell_index(x - 1, y)];
+            neighbor_count += 1;
+        }
+
+        int32_t value = self;
+        value += (MEMBRANE_REST - self) / 16;
+        if (neighbor_count > 0) {
+            value += (neighbor_sum - (neighbor_count * self)) / 8;
+        }
+
+        field->phase[index] = (uint8_t)(field->phase[index] + 1u);
+        if (matter[index] != 0) {
+            value += (int32_t)direction_count(matter[index] & DIRECTION_MASK);
+            if (field->phase[index] == 0) {
+                value += MEMBRANE_SPONTANEOUS_PULSE;
+            }
+        }
+
+        uint8_t local_direction = membrane_gradient_direction(
+            field->potential, index, value, field->phase[index], 0, 0);
+        membrane_remember_relation(field, index, local_direction,
+                                   matter[index] != 0);
+
+        int32_t local_threshold = MEMBRANE_THRESHOLD -
+            (int32_t)(field->history_strength[index] >> 4);
+
+        if (field->refractory[index] > 0) {
+            field->refractory[index] -= 1u;
+            if (value > MEMBRANE_REST) {
+                value = (value + MEMBRANE_REST) / 2;
+            }
+        } else if (matter[index] != 0 && value >= local_threshold) {
+            uint8_t direction = membrane_gradient_direction(
+                field->potential, index, value, field->phase[index],
+                field->history_direction[index],
+                field->history_strength[index]);
+            if (direction != 0) matter[index] |= direction;
+            value = MEMBRANE_RESET;
+            field->refractory[index] = MEMBRANE_REFRACTORY_BEATS;
+        }
+
+        field->next_potential[index] = membrane_clamp(value);
+    }
+
+    int16_t *previous = field->potential;
+    field->potential = field->next_potential;
+    field->next_potential = previous;
 }
 
 static uint8_t interact(uint8_t state) {
@@ -466,6 +696,14 @@ int main(void) {
         return 8;
     }
 
+    struct membrane_field membrane = {0};
+    if (membrane_initialize(&membrane, cells) != 0) {
+        free(next);
+        munmap(mapping, state_bytes);
+        close(descriptor);
+        return 9;
+    }
+
     struct sigaction action;
     memset(&action, 0, sizeof(action));
     action.sa_handler = stop_medium;
@@ -488,6 +726,7 @@ int main(void) {
         advance_depth(&depth, next, &next_depth, world.field != NULL);
 
         apply_world(next, world.field, arc4random_uniform(8));
+        advance_membrane(next, &membrane);
         memcpy(cells, next, cell_count);
         sparse_free(&depth);
         depth = next_depth;
@@ -501,6 +740,7 @@ int main(void) {
         close(world.descriptor);
     }
     sparse_free(&depth);
+    membrane_free(&membrane);
     free(next);
     munmap(mapping, state_bytes);
     close(descriptor);

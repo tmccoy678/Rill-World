@@ -56,6 +56,31 @@ field.
 
 The decay relation uses no additional bit and privileges no direction or axis.
 
+### Live planar membrane
+
+The membrane exists only on the persistent plane and is held in Rill's heap.
+It is indexed alongside planar matter but is not stored inside the matter byte.
+Each planar location has:
+
+- signed 16-bit current voltage and signed 16-bit next voltage;
+- an 8-bit entropy-seeded phase;
+- an 8-bit refractory state;
+- an 8-bit remembered local direction;
+- an 8-bit recurrence strength.
+
+Voltage leaks toward rest and couples only to north, east, south, and west
+neighbors. When matter occupies a location, local matter activity contributes
+to voltage and phase wrap supplies an endogenous pulse. Threshold firing adds
+the direction of the steepest local voltage drop to the matter state, resets
+voltage, and begins an eight-beat refractory interval.
+
+Recurring local gradient direction strengthens slowly. A remembered direction
+can modestly lower the local firing threshold and bias the gradient comparison,
+but it cannot override a stronger present gradient. Conflict weakens the prior
+tendency before another replaces it; absent or unused history decays more
+slowly. These values never enter `rill.bits`, `world.bits`, or the outward light
+surface. Sparse `+z/-z` matter has no membrane state.
+
 ## Rill World
 
 - Language: Objective-C with AppKit, AVFoundation, CoreBluetooth, CoreMedia,
@@ -85,6 +110,9 @@ A process restart therefore has a specific meaning:
 
 - The planar field remains.
 - The live sparse depth is culled.
+- Membrane voltage, phase, refractory state, and local hysteresis are
+  reinitialized; only their consequences already carried by planar matter
+  remain.
 - Capture sessions and timers are recreated.
 - Current environmental arrays are remapped and then overwritten or decayed by
   the present environment.
