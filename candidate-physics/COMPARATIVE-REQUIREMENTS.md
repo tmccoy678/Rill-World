@@ -1,7 +1,7 @@
 # Architecture requirements from the comparative pass
 
-The inactive candidate must not assume that one transport mode, one pump, one
-wave, one passage type, or one coordinating region is universally required.
+The inactive candidate must leave room for multiple transport modes, pumps,
+waves, passage types, and coordinating regions.
 
 ## Transport modes that must remain possible
 
@@ -27,14 +27,13 @@ Passages may:
 - be replaced through local growth rather than repaired in place;
 - isolate a damaged region while preserving the larger network.
 
-A fixed test passage is an apparatus, not a claim that later passages remain
-fixed.
+A fixed test passage is the apparatus for one bounded question. Later passages
+may emerge, change, or disappear through local relations.
 
 ## Distributed driving
 
-Whole-network transfer may arise from many small local drivers. A candidate
-must not require one permanent central driver unless that requirement is the
-specific question being tested.
+Whole-network transfer may arise from many small local drivers. Permanent
+central driving belongs only in a trial that asks about it explicitly.
 
 Equivalent regions may coordinate through topology, shared pressure, coupled
 waves, or local exchange without permanent leadership.
@@ -49,7 +48,8 @@ changed topology redirects later transfer
 redirected transfer changes later topology
 ```
 
-This relation must remain expressible without a global route planner.
+Local transfer and topology must be able to reshape one another through their
+own relations.
 
 ## Damage and proportional repair
 
@@ -65,8 +65,8 @@ systems: directional transfer, pressure change, electrical-like excitation,
 chemical-like amplification, and local mechanical response.
 
 A self-propagating response may arise when one local change produces a second
-change that recreates the first change in a neighboring region. No central
-broadcaster is required.
+change that recreates the first change in a neighboring region. Propagation
+itself carries the response.
 
 ## Experiment 02 hold
 

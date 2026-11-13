@@ -3,9 +3,8 @@
 These files were copied from Agar at **2026-11-05 03:03:19 UTC**
 (2026-11-04 21:03:19 CST), after the outward light boundary became visible.
 
-Rill was not stopped, paused, compacted, or locked for the copy. The snapshot is
-therefore deliberately non-atomic: bytes may have been read across more than
-one field beat.
+Rill continued during the copy, making the snapshot deliberately non-atomic:
+bytes may span more than one field beat.
 
 | File | Bytes | SHA-256 |
 |---|---:|---|
@@ -14,8 +13,8 @@ one field beat.
 
 The Rill file contains the header and planar field. It excludes the sparse
 off-plane state held only in the running process. The world file contains
-current boundary arrays, not an input history. These two files cannot replay or
-fully reconstruct the live Rillworld present at the time of copying.
+current boundary arrays. Together they preserve the planar trace available at
+the moment of copying.
 
-Their value is narrower and more honest: they preserve one externally acquired
-trace of the field without pretending that the trace is the field itself.
+Their value is exact and bounded: one externally acquired trace of a larger
+live field.

@@ -1,8 +1,11 @@
 # Conceptual lineage
 
-These works are intellectual neighbors, not evidence that Rillworld belongs to
-the biological or philosophical categories they examine. References are
-formatted in APA style and identifiers were checked against publisher records.
+These works define Rillworld's intellectual neighborhood. Each category claim
+follows its evidence. References are formatted in APA style and identifiers
+were checked against publisher records.
+
+The term history and field-by-field bibliography appear in
+[`RELATED-FIELDS.md`](RELATED-FIELDS.md).
 
 Braitenberg, V. (1984). *Vehicles: Experiments in synthetic psychology*. MIT
 Press.

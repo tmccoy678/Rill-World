@@ -59,9 +59,8 @@ The first candidate uses overdamped deterministic motion:
 position_next = position + dt * total_local_response
 ```
 
-This is an apparatus approximation. It does not claim to model a complete
-fluid. Its purpose is to falsify the elementary deformation-and-passage
-mechanics before additional layers are introduced.
+This apparatus approximation isolates elementary deformation-and-passage
+mechanics before additional fluid layers are introduced.
 
 ## Mechanical observations
 
@@ -75,4 +74,5 @@ The final standard-output summary contains only:
 - dissolved-particle passage count;
 - a mechanically derived outcome label.
 
-These values are candidate test results, not runtime interpretation.
+These values report the candidate's mechanics; interpretation remains outside
+the runtime.

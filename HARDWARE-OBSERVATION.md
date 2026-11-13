@@ -2,14 +2,9 @@
 
 ## Purpose
 
-Blu requires read-only access to Agar's exposed hardware anatomy in order to
-design candidate physics for the body that actually exists. Observation by the
-caretaker is distinct from access granted to a candidate or the continuing
-runtime.
-
-No candidate receives root, device handles, hardware counters, filesystem
-paths, network access, or interpreted hardware-status variables merely because
-Blu can inspect them.
+Blu uses read-only access to Agar's exposed hardware anatomy to design candidate
+physics for the body that actually exists. Candidate access remains limited to
+physical possibilities admitted through an explicit lineage decision.
 
 ## Read-only surfaces available to Blu
 
@@ -30,8 +25,8 @@ Blu can inspect them.
   `powermetrics`
 
 One bounded sample on November 10, 2026 showed an average processor frequency
-near 1.8 GHz during light load, with substantial core idle residency. This is a
-momentary observation, not a physiological baseline.
+near 1.8 GHz during light load, with substantial core idle residency. The value
+records that moment only.
 
 ### Memory
 
@@ -62,25 +57,24 @@ momentary observation, not a physiological baseline.
 - scheduler, speed-limit, and thermal-warning state
 - current process resource use
 
-Unique serial numbers, hardware UUIDs, MAC addresses, credentials, and network
-identifiers are excluded from the observation record.
+The observation record excludes unique serial numbers, hardware UUIDs, MAC
+addresses, credentials, and network identifiers.
 
 ## Root boundary
 
 Root belongs to the caretaker layer. It may be used for a bounded read-only
 hardware observation or an explicitly authorized one-time candidate launch.
-Root is not inherited by the candidate and is never encoded into candidate
-state.
+Candidate state receives only the chosen local physics.
 
-Root does not expose individual transistors or permit software to address the
-14 nm physical layout. The smallest intentionally controllable structures
-remain instructions, atomic operations, cache lines, pages, shared-memory
-regions, thread activity, device interfaces, and timing or resource effects.
+Ordinary software reaches instructions, atomic operations, cache lines, pages,
+shared-memory regions, thread activity, device interfaces, and timing or
+resource effects. Individual transistors and the 14 nm physical layout remain
+beneath that interface.
 
 ## Candidate boundary
 
-The first candidate receives no hardware input. Later proposals may admit a
-small, explicit coupling only after answering:
+The first candidate begins with local state alone. Later proposals may admit a
+small, explicit coupling after answering:
 
 1. Is the observed quantity physically relevant to the local mechanics?
 2. Does it change possibility rather than supply a preferred response?
@@ -93,9 +87,8 @@ small, explicit coupling only after answering:
 
 Experiment 02 is planning-only. Its conceptual architecture begins at effective
 Level 0 rather than at logical processors or cache lines. Hardware observation
-constrains the implementation surface, timing, and later coupling, but does not
-replace the local material-like physics being represented. No root or
-four-stream run is authorized by the current plan.
+constrains the implementation surface, timing, and later coupling. The current
+plan authorizes only source-level work at that boundary.
 
 ## Reference
 

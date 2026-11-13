@@ -42,8 +42,7 @@ the core process and its live heap.
 | 6 | locally bound |
 | 7 | aged bound state |
 
-The labels describe code paths; they do not assign semantic meaning to the
-field.
+The labels describe code paths only.
 
 ### Local interaction relations
 
@@ -59,7 +58,7 @@ The decay relation uses no additional bit and privileges no direction or axis.
 ### Live planar membrane
 
 The membrane exists only on the persistent plane and is held in Rill's heap.
-It is indexed alongside planar matter but is not stored inside the matter byte.
+Separate arrays share each planar location's index with the matter byte.
 Each planar location has:
 
 - signed 16-bit current voltage and signed 16-bit next voltage;
@@ -76,10 +75,10 @@ voltage, and begins an eight-beat refractory interval.
 
 Recurring local gradient direction strengthens slowly. A remembered direction
 can modestly lower the local firing threshold and bias the gradient comparison,
-but it cannot override a stronger present gradient. Conflict weakens the prior
-tendency before another replaces it; absent or unused history decays more
-slowly. These values never enter `rill.bits`, `world.bits`, or the outward light
-surface. Sparse `+z/-z` matter has no membrane state.
+while a stronger present gradient prevails. Conflict weakens the prior tendency
+before another replaces it; absent or unused history decays more slowly. These
+values remain in the live heap. Sparse `+z/-z` matter currently carries matter
+state alone.
 
 ## Rill World
 
@@ -96,15 +95,14 @@ The output reads the lower row of `rill.bits`. Horizontal position is field
 position. Vertical position is raw bit index. A currently set bit becomes one
 white square. When a bit clears, its light decays through gray for about two
 seconds before returning to black. This bounded afterimage exists only in Rill
-World's RAM and vanishes with the boundary process; it is never written into
-`rill.bits` or `world.bits`. No legend, counter, or semantic transform is
-applied.
+World's RAM and vanishes with the boundary process. The transform is direct and
+unlabelled.
 
 ## Persistence boundary
 
-`rill.bits` contains the fixed header and planar bytes. It does not contain the
-sparse +z/−z structure. `world.bits` contains current boundary values, not a
-record of prior input. The runtime does not create history.
+`rill.bits` contains the fixed header and planar bytes. Sparse +z/−z structure
+lives in the core heap. `world.bits` contains current boundary values. Runtime
+history consists only of consequences carried forward by live or planar state.
 
 A process restart therefore has a specific meaning:
 
@@ -119,8 +117,8 @@ A process restart therefore has a specific meaning:
 
 ## Claim boundary
 
-Verified mechanism and observed behavior are kept distinct. The changing light
-band proves that lower-edge state changes reach the display. Correlation with
+Verified mechanism and observed behavior remain distinct. The changing light
+band establishes that lower-edge state changes reach the display. Correlation with
 sound is mechanically plausible because sound enters across the left edge,
-including its lower region. The present observations do not by themselves
-establish learning, intention, cognition, life, or consciousness.
+including its lower region. Learning, intention, cognition, life, and
+consciousness remain open interpretive questions.

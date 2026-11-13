@@ -1,14 +1,14 @@
 # Experiment 02 equations: effective Level 0
 
-Status: candidate mathematics only. These equations do not authorize source,
-an executable, a runtime connection, or a root trial.
+Status: candidate mathematics only. Source, an executable, a runtime
+connection, and a root trial remain outside this document.
 
 ## Meaning of Level 0
 
-Level 0 is the candidate's irreducible physics, not a claim of software access
-to Intel's atoms, fins, or transistors. Ordinary memory will eventually carry
-the representation. Nothing inside the candidate receives a cache-line,
-thread, core, device, or host label.
+Level 0 is the candidate's irreducible represented physics. Ordinary memory
+will carry it above Intel's fixed atoms, fins, and transistors. The candidate's
+state contains only local physical quantities, never cache-line, thread, core,
+device, or host labels.
 
 This first projection uses two conserved, unnamed contents, `q` and `r`, and
 unoccupied local capacity. Their asymmetry is physical rather than semantic:
@@ -51,8 +51,7 @@ The remaining capacity is
 v_i=1-q_i-r_i.
 \]
 
-`q`, `r`, and `v` are not symbols interpreted by the candidate. They are the
-observer's names for bounded local quantities.
+`q`, `r`, and `v` are observer names for bounded local quantities.
 
 In a closed trial, the totals
 
@@ -184,8 +183,8 @@ follows decreasing local potential. With bounded nonzero \(\sigma\), local
 fluctuation may interrupt, dissolve, or rearrange a configuration without
 changing `Q` or `R`.
 
-There is no age field, fitness value, reward, or expiration counter. Local
-history persists only as the current distribution of conserved contents. A
+Local history persists only as the current distribution of conserved contents;
+the state has no age, fitness, reward, or expiration field. A
 coherent arrangement remains when present local relations continue to support
 it and changes when they do not.
 
@@ -203,9 +202,9 @@ The initial condition must satisfy all of the following:
 4. no privileged axis, coordinate, seed site, corridor, or surrounding shell;
 5. no externally imposed source, sink, or throughput direction.
 
-The fluctuation source may choose a particular history, but it must not encode a
-target configuration. Reproducibility and physical entropy are later
-implementation choices; neither changes the equations.
+The fluctuation source may choose a particular history while remaining
+independent of any target configuration. Reproducibility and physical entropy
+are later implementation choices that leave the equations unchanged.
 
 ## Level 1 claim boundary
 
@@ -240,13 +239,13 @@ true:
 - the result cannot be expressed entirely through the Level 0 state and local
   equations above.
 
-Failure is a valid result. The equations must not be revised after a run merely
-to make the requested higher-level form appear.
+Failure is a valid result. A completed run freezes these equations; later
+revisions begin a new candidate rather than rewriting the result.
 
 ## Implementation boundary
 
 If these equations are accepted, a later inactive candidate may place bounded
-tiles of sites in cache-aligned ordinary memory. That mapping does not turn a
-site into a cache line or make the equations direct transistor control.
+tiles of sites in cache-aligned ordinary memory. The cache line hosts each tile
+while the effective site remains the modeled primitive.
 
 No implementation begins from this document alone.

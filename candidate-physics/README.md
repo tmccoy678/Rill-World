@@ -1,7 +1,6 @@
 # Inactive candidate physics
 
-Status: source-only design. Nothing in this directory is built, deployed, or
-connected to the continuing runtime.
+Status: source-only design, separate from the continuing runtime.
 
 The purpose is to reduce the next possible local system to physical primitives
 without assigning a target form, task, interpretation, or human-authored
@@ -25,8 +24,7 @@ See:
   equations; it remains separate from the continuing runtime.
 - `experiment-02/PLAN.md` for the planning-only Level 0→Level 1 emergence
   question; it contains no code or approved execution.
-- `OPEN-QUESTIONS.md` for choices that remain unresolved and must not be hidden
-  inside an implementation.
+- `OPEN-QUESTIONS.md` for choices that remain unresolved before implementation.
 
-An executable must not be added until every implemented rule can be traced to a
-stated primitive and each unresolved choice it settles is documented.
+Add an executable only after every implemented rule traces to a stated
+primitive and each resolved choice is documented.

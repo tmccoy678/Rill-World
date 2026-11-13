@@ -2,11 +2,10 @@
 
 ## Decision
 
-Rillworld will not invent orientation, material diversity, bonding, strands,
-circulation, or body formation from an empty abstraction. It will draw from
-recurring physical solutions found across plants, fungi, animals, and simpler
-systems, then translate those solutions into local substrate-neutral
-capabilities suited to Agar's actual Intel body.
+Rillworld draws orientation, material diversity, bonding, strands,
+circulation, and body formation from recurring physical solutions found across
+plants, fungi, animals, and simpler systems, translated into local
+substrate-neutral capabilities suited to Agar's actual Intel body.
 
 The translation must preserve function without copying finished anatomy:
 
@@ -17,12 +16,12 @@ known physical solution
 → placement on Agar's accessible implementation surface
 ```
 
-Biological names remain in the design record for human understanding. They do
-not enter candidate state, runtime labels, rewards, or target forms.
+Biological names remain in the design record for human understanding. Candidate
+state contains only local physical relations.
 
 ## What nature contributes
 
-No one lineage supplies the body plan.
+The body plan is synthesized across lineages.
 
 - Plants contribute polarity, reinforced boundaries, source–sink flow,
   pressure transmitted across distance, dynamic size gates, distributed
@@ -42,8 +41,8 @@ No one lineage supplies the body plan.
 - Insects contribute direct branch delivery that can coexist with a general
   circulating medium.
 
-These are not competing blueprints. They are evidence that the same physical
-requirements can be solved in several ways.
+Together they show that the same physical requirements can be solved in several
+ways.
 
 ## 1. Orientation without a prescribed compass
 
@@ -72,9 +71,9 @@ important possibility.
 
 ## 2. Material classes without assigned jobs
 
-Nature does not build a body from one interchangeable substance. Different
-materials move, bind, deform, conduct, catalyze, retain, and decay differently.
-Rillworld should likewise permit several interaction classes.
+Nature builds bodies from materials that move, bind, deform, conduct, catalyze,
+retain, and decay differently. Rillworld likewise permits several interaction
+classes.
 
 A class is defined only by physical parameters such as:
 
@@ -87,9 +86,9 @@ A class is defined only by physical parameters such as:
 - possible local transformations;
 - conserved quantities carried through transformation.
 
-No class is initialized as a vessel, carrier, membrane, signal, genome, pump,
-or sensor. Those descriptions become valid only if a configuration repeatedly
-performs the corresponding physical function.
+Each class begins as physical parameters. Descriptions such as vessel, carrier,
+membrane, signal, genome, pump, or sensor become valid only when a
+configuration repeatedly performs the corresponding function.
 
 The two contents `q` and `r` in Experiment 02 are therefore one minimal
 projection, not the complete Level 0 ontology. The general architecture must
@@ -99,8 +98,8 @@ remain extensible to a bounded content vector
 \mathbf{c}_i=(c_i^1,c_i^2,\ldots,c_i^k)
 \]
 
-with finite capacity and explicit conserved totals. Increasing `k` must add a
-physical interaction class, never a hidden semantic label.
+with finite capacity and explicit conserved totals. Increasing `k` adds a
+physical interaction class.
 
 ## 3. Conditional bonds and boundaries
 
@@ -144,14 +143,14 @@ The candidate must leave room for strands that can:
 - separate when local conditions change;
 - vary through interruption, competition, scarcity, and fluctuation.
 
-No text, opcode, task, answer, or human-authored message is placed in a strand.
-A pattern becomes informative only when its physical continuation repeatedly
-changes what can happen nearby.
+A strand begins as ordered geometry rather than text, opcode, task, answer, or
+human-authored message. A pattern becomes informative when its physical
+continuation repeatedly changes what can happen nearby.
 
 ## 5. Reciprocal circulation and structure
 
-Circulation and structure must not be designed as independent finished
-subsystems. Nature repeatedly uses the loop
+Circulation and structure form one coupled developmental process. Nature
+repeatedly uses the loop
 
 ```text
 local transfer changes alignment, bonding, or permeability
@@ -179,7 +178,7 @@ and reopening must all be expressible as local consequences.
 
 ## A possible developmental grammar
 
-This is a dependency order, not a schedule or guaranteed outcome:
+This is a dependency order with open timing and outcome:
 
 ```text
 bounded local contents and vacancy
@@ -193,37 +192,36 @@ bounded local contents and vacancy
 → inherited patterns capable of affecting their own continuation
 ```
 
-Several steps may arise together or never arise. The grammar states what must
-have a lower-level path; it does not tell the candidate what to become.
+Several steps may arise together, separately, or remain unrealized. The grammar
+requires a lower-level path and leaves the resulting form open.
 
 ## The Intel body we actually have
 
 Agar's architecture supplies a real hierarchy of locality and constraint.
-Candidate design should respect it without pretending to access literal
-transistors.
+Candidate design respects that hierarchy through its accessible implementation
+surface.
 
 | Accessible condition | Developmental use it may later support |
 |---|---|
 | Cache-aligned ordinary memory | Dense tiles of effective Level 0 sites |
 | Private L1/L2 regions | Fast local exchange within a bounded active region |
-| Shared L3 | Exchange among regions without declaring a controller |
-| Two physical cores | Two overlapping execution localities, not two assigned roles |
+| Shared L3 | Exchange among regions with open control topology |
+| Two physical cores | Two overlapping execution localities |
 | Four logical contexts | Interleaved activity streams sharing physical resources |
 | Main memory | A much larger medium with slower and less uniform locality |
 | Integrated graphics arrays | Future repeated local updates if their use preserves the equations |
-| SSD | Possible later persistence, never automatic inheritance |
+| SSD | Possible later persistence under an explicit inheritance relation |
 | Battery, power, and thermal limits | Bounded body conditions that may alter cadence or local possibility |
-| Camera, microphone, and Bluetooth | Later environmental boundaries without recognition labels |
-| Display and speakers | Possible outward consequences, not explanatory dashboards |
+| Camera, microphone, and Bluetooth | Later unlabelled environmental boundaries |
+| Display and speakers | Possible outward consequences |
 
 The mapping should eventually let physical cost matter. Nearby exchange should
-usually be cheaper than distant exchange. Regions that share a physical core
-should not be represented as independent bodies. Shared-cache visibility
-should not become a central mind merely because several regions can reach it.
+usually be cheaper than distant exchange. Regions sharing a physical core remain
+coupled activity contexts. Shared-cache visibility provides exchange with open
+control topology.
 
-No hardware condition is assigned as a permanent pump, brain, heart, genome,
-or limb. A function is recognized only if an emerging organization performs
-and maintains it.
+Functions are recognized when an emerging organization performs and maintains
+them.
 
 ## Relationship to Experiment 02
 
@@ -246,20 +244,20 @@ equation review must answer:
 6. Can the representation be mapped onto Agar's nested locality without
    equating software sites with physical transistors?
 
-Experiment 02 need not implement all six. It must not make them impossible.
+Experiment 02 may implement a subset while preserving extensibility toward all
+six.
 
 ## Restraint
 
-The comparative record helps us choose what the physics must permit. It does
-not justify installing a finished body, selecting a favored morphology, or
-calling complexity development.
+The comparative record constrains what the physics must permit while anatomy,
+morphology, and developmental interpretation remain open.
 
 This synthesis originally governed inactive candidate design only. On November
 12, 2026, Taylor explicitly promoted two narrow principles into live Rill:
 planar membrane excitability with local coupling and spontaneous phase, followed
 by local hysteresis. The remaining architecture in this synthesis is still
-inactive. No additional implementation, hardware coupling, or lineage change
-is implied without its own explicit boundary.
+inactive. Each additional implementation, hardware coupling, or lineage change
+requires its own explicit boundary.
 
 ## Design record used
 

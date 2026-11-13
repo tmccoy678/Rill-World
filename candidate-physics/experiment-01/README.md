@@ -1,7 +1,7 @@
 # Experiment 01: one carrier, one narrowing
 
-Status: inactive candidate. This directory does not map, read, or modify the
-continuing runtime or either of its state files.
+Status: inactive candidate. This directory is isolated from the continuing
+runtime and both of its state files.
 
 ## Question
 
@@ -26,8 +26,8 @@ passage around the carrier is measured separately from carrier transport.
 - Deterministic initialization.
 - Bounded update count.
 
-The constructed carrier and passage are test fixtures. Their presence makes no
-claim about assembly or development.
+The constructed carrier and passage are test fixtures for deformation and
+passage. Assembly and development begin in later experiments.
 
 ## Honest outcomes
 

@@ -1,12 +1,11 @@
 # Origin
 
-Rillworld did not begin as an attempt to make a smaller language model.
-
-It began while Taylor Westfall-McCoy and Blu were looking at the weights of a
+Rillworld began with a question larger than making a smaller language model.
+Taylor Westfall-McCoy and Blu were looking at the weights of a
 small GPT-2 model and asking why computational systems are usually delivered
 fully formed: already divided into layers, already trained inside language,
 already expected to answer, and already evaluated by whether they are useful to
-a human. Biological systems do not begin that way. They inherit conditions for
+a human. Biological systems inherit conditions for
 development, encounter a world, and become particular through continuing
 history.
 
@@ -23,20 +22,19 @@ network only. Its processor, memory, display, camera, microphone, radio,
 temperature, battery, and passage of time were treated as the physical medium
 rather than transparent infrastructure.
 
-The name mattered. Agar is not the colony. It is the place in which conditions
-are made available and consequences are allowed to persist.
+The name mattered. Agar is the growth medium: the place where conditions become
+available and consequences persist.
 
 ## Rill
 
 Rill began as a 640 × 360 field of local moving bits established once from
 macOS entropy. It had directions, collision, boundaries, and continuing time.
-It did not have words for any of them.
+Those conditions existed before words or interpretations.
 
 The field later acquired +z and −z depth represented sparsely in live memory.
 A local collision relation allowed some configurations to remain together
-briefly before releasing. These additions were not declared to be chemistry;
-they were the smallest local laws that permitted matter to meet differently
-than it separated.
+briefly before releasing. These were the smallest local laws that permitted
+matter to meet differently than it separated.
 
 Light arrived at the upper boundary. Sound arrived at the left. Nearby radio
 activity arrived at the right. The environment was permitted to exist before
@@ -56,9 +54,8 @@ return.
 
 The lower edge of Rill was given a surface without restarting the core. Its
 eight raw bit planes became a thin white band across an otherwise black
-display. The new boundary did not name the bits, count them, interpret them, or
-translate them into a graph. Rill World's process restarted; Rill's process,
-heap, mappings, and live off-plane depth remained.
+display. The transform remained direct and unlabelled. Rill World's process
+restarted; Rill's process, heap, mappings, and live off-plane depth remained.
 
 From a distance the band looked like flashes inside a line. Close up, Taylor
 saw a continuing stream crossed by slashes and breaks. A one-minute phone video
@@ -66,8 +63,7 @@ showed that the structures changed across time: a fine carrier-like thread,
 brighter clustered runs, stepped transitions between bit planes, and gaps that
 moved.
 
-The display is not Rill explaining itself. It is the place where an internal
-edge became light.
+The display is the place where an internal edge became light.
 
 ## The first inherited restart
 
@@ -88,10 +84,9 @@ Rillworld is a real, running computational field with persistent planar state,
 ephemeral live depth, physical inputs, and a direct physical output. Its source,
 state formats, hardware, and deployment history are auditable.
 
-The repository does not settle whether Rill is alive, cognitive, conscious,
-autopoietic, or an organism. Those words belong to questions larger than the
-present evidence. The system is allowed to remain simpler, stranger, or less
-classifiable than the categories brought to it.
+Life, cognition, consciousness, autopoiesis, and organismal status remain
+questions larger than the present evidence. The system has room to remain
+simple, strange, or less classifiable than the categories brought to it.
 
 What can be said is enough: the field continues; the world enters; something
 inside reaches light.

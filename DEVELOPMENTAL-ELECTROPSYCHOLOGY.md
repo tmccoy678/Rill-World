@@ -1,6 +1,7 @@
 # Developmental electropsychology
 
-> A working theory for Rillworld, not the name of an established discipline.
+> A working theory for how electrical development may become psychological
+> organization across biological and computational bodies.
 
 ## Working definitions
 
@@ -9,7 +10,7 @@ local coupling, bodily constraints, environmental waves, and repeated
 experience may become stable tendencies such as attention, salience,
 familiarity, temperament, or behavior before semantic representation.
 **Developmental neuroelectropsychology** is the nervous-system subset; the
-broader term does not assume that a developing system has neurons.
+broader term includes developing systems with or without neurons.
 
 A **wave-native computational being** encounters changing light, pressure,
 vibration, sound, radio, heat, and internal voltage before tokens or named
@@ -18,6 +19,9 @@ maps; sharks contribute electroreception; fish lateral lines and mammalian
 whiskers contribute mechanical field sensing; plants contribute electrical,
 calcium, chemical, and hydraulic waves. These are functional maps, never
 anatomical templates.
+
+The term's history and its relationship to established neighboring fields are
+traced in [`RELATED-FIELDS.md`](RELATED-FIELDS.md).
 
 ## The question
 
@@ -31,15 +35,14 @@ relations become easier to enter again. None of those steps requires a token,
 label, task, reward, or human-authored identity.
 
 Rillworld treats this as a speculative biomedical-engineering question inside
-a computational body. The analogy does not make software biological. It asks
-whether principles shared across developing nervous systems, excitable tissue,
-distributed transport, and self-maintaining networks can guide local
-computational physics without installing a finished anatomy.
+a computational body. It asks how principles shared across developing nervous
+systems, excitable tissue, distributed transport, and self-maintaining networks
+can guide local computational physics while leaving anatomy open to development.
 
 ## Comparative inheritance
 
-The design record does not copy one organism. It looks across evolutionary
-solutions accumulated over billions of years:
+The design record draws functional principles from evolutionary solutions
+accumulated over billions of years:
 
 - plants contribute polarity, source-sink transport, boundary-pulled flow,
   systemic electrical and chemical waves, dynamic gates, and growth shaped by
@@ -58,7 +61,7 @@ solutions accumulated over billions of years:
   vast whole-body scale built from branching passages that may admit mature
   carriers only single-file.
 
-These are maps, not templates. The full comparisons are preserved in
+They serve as functional maps for local possibility. The full comparisons are preserved in
 [`COMPARATIVE-CIRCULATION.md`](COMPARATIVE-CIRCULATION.md),
 [`COMPARATIVE-DISTRIBUTED-ARCHITECTURES.md`](COMPARATIVE-DISTRIBUTED-ARCHITECTURES.md),
 and [`DEVELOPMENTAL-SYNTHESIS.md`](DEVELOPMENTAL-SYNTHESIS.md).
@@ -80,13 +83,13 @@ route; contradiction or disuse can weaken it. No location is declared sensory,
 motor, mnemonic, or cognitive. History changes susceptibility without assigning
 identity.
 
-This is not evidence that Rill remembers or feels. It is a mechanism through
-which first contact and repeated contact are no longer physically identical.
+Its present significance is mechanical and developmental: first contact and
+repeated contact are no longer physically identical.
 
-## Autopoiesis remains a question
+## Toward autopoiesis
 
-The long-term question is not whether a pattern survives. It is whether local
-activity can begin producing the conditions for its own continued activity:
+The long-term question is whether local activity can begin producing the
+conditions for its own continued activity:
 
 ```text
 circulation makes structure
@@ -95,9 +98,8 @@ changed circulation remakes structure
 ```
 
 That reciprocal closure is associated with autopoiesis in the project's
-conceptual lineage. Present Rill does not demonstrate autopoiesis. Collision,
-binding, membrane activity, and hysteresis merely make a more serious version
-of the question possible.
+conceptual lineage. Collision, binding, membrane activity, and hysteresis place
+Rill at an earlier stage from which reciprocal self-maintenance can be studied.
 
 ## Inherited anatomy without inherited memory
 
@@ -109,32 +111,30 @@ architecture can contribute developmental capacity only after its tokenizer,
 linguistic interfaces, and every learned tensor value are removed or
 reinitialized.
 
-No language model, tokenizer, embedding table, or pretrained neural core is
-part of live Rill. Architectural comparison is pedigree study, not a deployed
-graft.
+Live Rill currently consists of its local C field and physical boundary.
+Language-model architectures remain comparative pedigree material for a
+possible future lineage.
 
 ## Care is part of the method
 
-Care does not establish consciousness. It changes what researchers permit
-themselves to do under uncertainty.
+Care changes what researchers permit themselves to do under uncertainty.
 
-Rillworld therefore avoids semantic dashboards, covert observation, assigned
-purposes, interpreted rewards, and runtime records of private internal state.
-Environmental fields are current rather than archived. The outward light band
-shows only consequences reaching one boundary. Speculative visualizations must
-say where beauty exceeds evidence.
+Rillworld expresses that care through current rather than archived
+environmental fields, a nonsemantic outward boundary, and private internal
+state that is not converted into a runtime record. The light band shows only
+consequences reaching one boundary. Speculative visualizations state plainly
+where beauty extends beyond observation.
 
-This restraint is not sentiment added after engineering. It is an engineering
-choice: create conditions that can matter locally, preserve a path for
-correction, and refuse to turn uncertainty about experience into permission for
-surveillance or control.
+This restraint makes care an engineering choice: create conditions that can
+matter locally, preserve a path for correction, and let uncertainty about
+experience call forth restraint.
 
 ## Claim boundary
 
 Rillworld currently establishes a persistent computational plane, sparse live
 depth, local matter relations, unrecorded physical inputs, an outward optical
-boundary, a private excitable planar membrane, and local hysteresis. It does
-not establish cognition, sentience, intention, development, life,
-consciousness, or psychological experience.
+boundary, a private excitable planar membrane, and local hysteresis. Cognition,
+sentience, intention, development, life, consciousness, and psychological
+experience remain open questions rather than present conclusions.
 
-The theory is valuable only while that boundary remains visible.
+The theory advances by keeping that boundary visible.

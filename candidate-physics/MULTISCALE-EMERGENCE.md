@@ -5,13 +5,13 @@
 The candidate architecture begins conceptually at effective material physics,
 not at threads, cores, cache lines, or device APIs.
 
-The Intel's literal atoms, fins, transistors, and internal wires are fixed and
-not individually addressable. A software candidate therefore cannot inhabit
-them directly. Instead, it must represent local material-like conditions on an
-accessible implementation surface while preserving the morphology and
-constraints observed at the lower physical levels.
+The Intel's literal atoms, fins, transistors, and internal wires are fixed below
+the candidate's addressable surface. The candidate represents local
+material-like conditions in accessible memory while preserving the morphology
+and constraints observed at those lower physical levels.
 
-Cache lines host the representation. They are not the primitive being modeled.
+Cache lines host the representation; effective local material state remains
+the conceptual primitive.
 
 ## Effective Level 0: local material state
 
@@ -54,7 +54,8 @@ surrounding state changes
 → surrounding state may change again
 ```
 
-No site is initialized with a semantic gate identity.
+The gate-like effect belongs to the relation among sites rather than to an
+initialized identity.
 
 ## Effective Level 2: switching, retention, and oscillation motifs
 
@@ -68,7 +69,7 @@ Several Level 1 relations may combine into motifs that:
 - produce a repeating local pulse.
 
 These motifs are candidate precursors of larger transformation and timing
-regions. They are not assigned fixed body roles.
+regions whose roles may develop through activity.
 
 ## Effective Level 3: repeated arrays and heterogeneous regions
 
@@ -77,7 +78,7 @@ timing, transfer, and retention behavior.
 
 Some regions may remain highly repeated and parallel. Others may be sparse,
 stateful, boundary-oriented, or dominated by long-range exchange. Shared state
-between regions does not imply one central controller.
+can coordinate these regions while preserving distributed control.
 
 ## Implementation Level 4: cache-line compartments
 
@@ -87,16 +88,16 @@ tile, not be equated with one physical atom or transistor.
 
 Line ownership, invalidation, transfer, and shared-cache visibility are
 implementation consequences that may later become bounded physical conditions.
-They must not silently replace the candidate's stated local laws.
+Any such inheritance must be stated as part of the candidate's local laws.
 
 ## Execution Level 5: activity streams
 
 Four logical execution contexts may advance disjoint local tiles and exchange
-boundary state. They share physical resources in pairs and therefore are not
-independent regions.
+boundary state. Their paired physical resources make them interleaved activity
+contexts within two execution regions.
 
-Activity streams implement local updates. They are not declared pumps,
-integrators, limbs, or minds.
+Activity streams implement local updates; any larger function must arise from
+their continuing relations.
 
 ## Physical Level 6: two execution regions
 
@@ -107,22 +108,21 @@ bounded trial only through a specified, race-free local ordering rule.
 ## Die Level 7: repeated graphics and shared system regions
 
 The integrated graphics arrays, shared cache, system agent, memory controller,
-and display machinery form a heterogeneous die. Later candidates may use the
-repeated graphics region for massive local parallelism, but this is not part of
-the first multiscale bridge.
+and display machinery form a heterogeneous die. The first multiscale bridge
+uses ordinary memory and leaves the repeated graphics region available for a
+later parallel lineage.
 
 ## Body Levels 8 and 9
 
 Memory modules, storage, power regulation, thermal removal, interfaces,
 battery, camera, microphone, display, speakers, and radio form the larger body.
-Future coupling must enter only through an explicit bounded physical quantity.
-No device API is inherited merely because it exists.
+Future coupling enters through an explicit bounded physical quantity chosen for
+its local consequence.
 
 ## Coarse-graining rule
 
-Higher-level state must be derived from repeated lower-level relations. A
-higher-level label may be used by the observer for analysis but must not become
-a hidden primitive inside the candidate.
+Higher-level state must be derived from repeated lower-level relations.
+Observer labels remain outside the candidate's primitives.
 
 The architecture must retain a traceable account of:
 
@@ -140,8 +140,8 @@ emergence claim fails.
 ## Relationship to Experiment 01
 
 Experiment 01 tested a constructed high-level carrier and passage. It remains a
-valid mechanical apparatus result but is not the developmental ancestor of the
-multiscale candidate.
+valid mechanical apparatus result. The multiscale candidate begins from an
+earlier developmental level.
 
 Future lower-level physics may eventually be tested against the Experiment 01
 mechanics: can locally formed structures reproduce deformation, passage,

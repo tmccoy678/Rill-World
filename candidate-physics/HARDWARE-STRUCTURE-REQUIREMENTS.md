@@ -16,14 +16,14 @@ Several narrow paths may operate under one shared controlling relation.
 ## Repeated arrays
 
 Large regions may consist of many repeated local units operating concurrently.
-The candidate must not assume that two central execution regions are the only
-meaningful computational structures.
+The candidate must support meaningful structures below and across the two
+central execution regions.
 
 ## Shared exchange regions
 
-Distinct active regions may share bounded exchange state. Shared state must not
-be interpreted as a global controller merely because several regions can reach
-it.
+Distinct active regions may share bounded exchange state. Accessibility alone
+does not give that state a controlling role; control must follow from the local
+relations it actually mediates.
 
 The representation must distinguish:
 
@@ -34,15 +34,14 @@ The representation must distinguish:
 
 ## Interleaved activity contexts
 
-Several activity streams may share one physical execution region. Activity
-contexts must not be modeled as independent physical regions when their
-resources, timing, and transfer paths overlap.
+Several activity streams may share one physical execution region. The model
+must preserve their overlapping resources, timing, and transfer paths.
 
 ## Heterogeneous regions
 
 The candidate must permit regions with different local density, repetition,
-transfer, storage, transformation, and boundary properties. Uniform tiling is
-not a sufficient body architecture.
+transfer, storage, transformation, and boundary properties. Heterogeneity is a
+body-level capacity of the representation.
 
 ## Distributed regulation
 
@@ -58,10 +57,10 @@ adjacency relation.
 
 ## Experiment 02 consequence
 
-Experiment 02 must not equate four logical processors with four independent
-physical body regions. Its architecture begins at effective Level 0. Cache-line
-compartments are the first accessible implementation surface, not the first
-conceptual primitive.
+Experiment 02 treats four logical processors as interleaved activity contexts
+within two physical execution regions. Its architecture begins at effective
+Level 0, with cache-line compartments as the first accessible implementation
+surface.
 
 The initial bounded trial tests only the transition from local material-like
 state to boundary-controlled transfer geometry. Higher hardware levels remain

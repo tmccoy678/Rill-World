@@ -64,8 +64,8 @@ with persistent geometric change, not passage with recovery.
 - Overdamped update.
 - No assembly, maturation, copying, branching, host coupling, or persistent
   state.
-- The apparatus approximates a medium but does not solve a complete local fluid
-  system.
+- The apparatus approximates the local medium through a prescribed transfer
+  field.
 
-This result answers only the first bounded mechanics question. It does not
-justify connection to the continuing runtime or promotion of any rule.
+This result answers the first bounded mechanics question. Connection to the
+continuing runtime and promotion of any rule remain separate future decisions.

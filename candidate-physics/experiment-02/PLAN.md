@@ -14,8 +14,8 @@ gate or assigning a higher-level function?
 The trial begins with the effective Level 0 site representation specified in
 `EQUATIONS.md`: two conserved unnamed contents, finite unoccupied capacity,
 local potentials, local cohesion, local competition, bounded fluctuation, and
-conservative nearest-neighbor transfer. Permeability is a present local
-relation, not an initialized site identity.
+conservative nearest-neighbor transfer. Permeability exists as a present local
+relation among those quantities.
 
 ## Required emergence
 
@@ -32,7 +32,7 @@ The trial may claim a Level 1 result only if:
 ## Implementation surface
 
 The proposed implementation surface is a cache-aligned array of local sites.
-This is an accessible representation layer, not the conceptual starting level.
+This accessible representation layer carries the effective Level 0 physics.
 
 No four-stream or root execution is approved by this plan. The number of
 threads, ordering rule, hardware observation, and one-time run boundary remain
@@ -57,14 +57,12 @@ It deliberately postpones:
 - host-condition coupling;
 - higher-level carriers and templating.
 
-Postponement means the initial representation must not silently make these
-possibilities impossible.
+The initial representation must preserve room for these later possibilities.
 
 ## Preservation boundary
 
 `DEVELOPMENTAL-SYNTHESIS.md` defines the larger architecture of which this
-trial is one projection. Experiment 02 does not implement that architecture,
-but its representation must remain extensible to:
+trial is one projection. Its representation must remain extensible to:
 
 - locally acquired orientation;
 - additional physical interaction classes;
@@ -74,8 +72,8 @@ but its representation must remain extensible to:
   transfer;
 - nested mapping onto Agar's real hardware locality.
 
-These are preservation requirements, not hidden acceptance criteria for the
-first trial.
+These are preservation requirements for the lineage; the first trial is judged
+by its stated Level 0 to Level 1 bridge.
 
 ## Explicit exclusions
 
@@ -91,6 +89,6 @@ first trial.
 
 ## Required next decision
 
-Review `EQUATIONS.md` as the candidate's effective Level 0 physics. No code is
-added until its conserved quantities, local asymmetry, transfer law, and claim
-boundary are accepted without relying on a desired visual result.
+Review `EQUATIONS.md` as the candidate's effective Level 0 physics. Code begins
+after its conserved quantities, local asymmetry, transfer law, and claim
+boundary are accepted on their mechanics.

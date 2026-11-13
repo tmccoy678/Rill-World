@@ -30,7 +30,7 @@ available, and a full scheduler and speed limit.
 The body also exposes integrated graphics, a built-in display, two-channel
 audio input and output, a camera, a Bluetooth controller, solid-state storage,
 and bounded timing and processor-residency measurements. These are caretaker
-observations. The inactive candidate receives none of them.
+observations. The inactive candidate remains isolated from those interfaces.
 
 ## Memory-hierarchy implications
 
@@ -44,13 +44,13 @@ tiles whose hot state remains comfortably beneath L2 capacity. Contiguous tile
 dimensions should align with the 64-byte cache line where practical. Persistent
 files should align to the 4,096-byte memory-page boundary.
 
-These are efficiency constraints, not semantics. Cache placement must never
-select a target structure or preferred result.
+These constraints govern physical efficiency alone. Candidate structure and
+outcome remain consequences of the local laws.
 
 ## Initial working envelope
 
 The first mechanical candidate should remain far smaller than installed memory
-and should not compete materially with the continuing runtime. Its active hot
+and leave the continuing runtime undisturbed. Its active hot
 tile, present local medium, and next-state tile should target L2. The complete
 candidate state should target L3 where practical.
 
@@ -64,8 +64,8 @@ Candidate time must be expressed in local update steps. Wall-clock measurements
 may characterize cost but must not become a target for the local state.
 
 Later host coupling may admit bounded changes in cadence, capacity,
-resistance, or transformation threshold. Those couplings are unresolved and
-are not part of the first trial.
+resistance, or transformation threshold. The first trial remains locally
+closed while those couplings are developed.
 
 Administrative privilege is never a candidate input or capability. A future
 hardware coupling must expose only the exact bounded physical quantity required

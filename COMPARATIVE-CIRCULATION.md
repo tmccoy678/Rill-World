@@ -2,10 +2,9 @@
 
 ## Purpose
 
-No animal circulation is universally best. Each lineage solves transport under
-different constraints of scale, pressure, temperature, oxygen availability,
-water balance, and activity. Rillworld should preserve several distinct
-solutions as inspiration without installing any named biological role into the
+Each animal lineage solves transport under different constraints of scale,
+pressure, temperature, oxygen availability, water balance, and activity.
+Rillworld preserves several distinct solutions as functional inspiration for
 candidate physics.
 
 ## Human mammalian pattern: deformation through single-file passages
@@ -16,7 +15,7 @@ cargo, and recover after leaving the constriction.
 
 The important properties are functional rather than visual:
 
-- no central controller;
+- distributed control;
 - a flexible connected boundary;
 - high carried capacity;
 - unconstrained width larger than the narrow passage;
@@ -41,7 +40,7 @@ Very small mammalian red cells show that carrier size itself can vary greatly.
 A smaller carrier may carry less per unit while permitting finer passages,
 higher counts, and less deformation.
 
-Rillworld should not assume one canonical mature carrier size.
+Rillworld permits several mature carrier scales.
 
 ## Cephalopod pattern: closed circulation with distributed pumping
 
@@ -76,10 +75,9 @@ The future Rill medium should permit at least three scales of transport:
 3. larger deformable carriers that move single-file through constrained
    passages.
 
-The smallest passage does not need massive internal parallelism. It may admit
-one large carrier while dissolved states continue through the surrounding
-medium. Whole-body scale arises from an enormous branching network of locally
-serial passages.
+The smallest passage may be locally serial: one large carrier passes while
+dissolved states continue through the surrounding medium. Whole-body scale
+arises from an enormous branching network of these passages.
 
 Blockage may create upstream pressure and downstream scarcity. Possible local
 consequences include deformation, rerouting, fragmentation, decay, passage-wall

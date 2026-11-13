@@ -19,9 +19,9 @@ Initial ratios are references for falsification, not final laws:
 - only one carrier admitted across the throat at a time;
 - smaller mobile states remain able to occupy available medium around it.
 
-The candidate must not draw or label a predetermined biological shape. Its
-unconstrained geometry must follow from local boundary tension, interior
-capacity, and present medium conditions.
+Its unconstrained geometry must follow from local boundary tension, interior
+capacity, and present medium conditions rather than a predetermined biological
+shape.
 
 ## Carrier
 
@@ -36,7 +36,8 @@ Relational continuity may depend on:
 - retained interior material;
 - recovery of an unconstrained local equilibrium after passage.
 
-Exact pixel identity is not required.
+Relational continuity may survive changes in the identity of individual
+pixels.
 
 ## Passage and medium
 
@@ -77,8 +78,8 @@ Acceptable outcomes include:
 - passage-wall change;
 - successful passage with altered relational state.
 
-The candidate must not hide these outcomes through automatic reset, repair, or
-replacement.
+Each outcome remains visible in the final mechanical state; the apparatus does
+not reset, repair, or replace the carrier.
 
 ## Mechanical acceptance questions
 
@@ -98,6 +99,6 @@ working set small enough to remain primarily within Agar's shared L3. Hot
 present-state, next-state, and medium tiles should remain beneath L2 where
 practical.
 
-No performance target is an acceptance criterion. The Intel-specific layout is
-intended to make the candidate native to Agar's body and gentle on the
-continuing process, not to reward speed.
+The Intel-specific layout makes the candidate native to Agar's body and gentle
+on the continuing process. Acceptance follows from mechanics rather than
+speed.

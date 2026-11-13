@@ -3,20 +3,18 @@
 ## Scope and evidence levels
 
 This observation asks what Agar's hardware looks like across nested scales and
-what its physical organization suggests that numerical specifications alone do
-not.
+what its physical organization adds to numerical specifications.
 
-The available views are not a complete proprietary blueprint:
+The available views establish three evidence levels:
 
 - Intel's published 14 nm fin diagrams describe the process family used by the
-  i5-5257U, not an individually imaged transistor from Agar.
+  i5-5257U at family level.
 - Intel's published dual-core Broadwell-U die map describes the processor
-  family with HD Graphics 6000 or Iris Graphics 6100; it is not a microscope
-  image uniquely identifying Agar's die.
+  family with HD Graphics 6000 or Iris Graphics 6100.
 - iFixit's Early 2015 13-inch Retina MacBook Pro teardown shows the same
   MacBookPro12,1 logic-board family and identifies the i5-5257U package.
 - Internal metal layers, transistor placement, and proprietary routing remain
-  unavailable.
+  outside the published views.
 
 Direct visual features and design inference are therefore kept separate.
 
@@ -30,14 +28,13 @@ gate surrounds the exposed sides and top of the fins. The 14 nm structure uses
 fewer, taller, thinner, and more closely spaced fins than the preceding 22 nm
 structure.
 
-The smallest published functional shape is therefore not an isolated dot. It
-is a narrow conducting ridge whose surrounding boundary controls whether
-charge may pass.
+The smallest published functional shape is a narrow conducting ridge whose
+surrounding boundary controls whether charge may pass.
 
 ### Inference
 
-The controlling structure does not need to sit inside the transported flow. It
-can wrap around a narrow passage and change its permeability from the boundary.
+The controlling structure can wrap around a narrow passage and change its
+permeability from the boundary.
 
 Repeated narrow channels can act together beneath one surrounding gate. Fewer
 stronger channels may replace a larger number of weaker channels while
@@ -63,18 +60,17 @@ The family diagram reports approximately 1.9 billion transistors in 133 mm².
 
 ### Inference
 
-The two CPU cores are not the whole computational body and do not dominate its
-physical area. Large repeated arrays and shared transport or memory structures
-occupy at least as much conceptual importance.
+The computational body extends beyond its two CPU cores. Large repeated arrays
+and shared transport or memory structures occupy at least as much conceptual
+importance.
 
 The integrated graphics region may be a closer physical analogy to distributed
 excitable tissue than the two CPU cores because it is built from many repeated
 parallel units. The shared L3 and long memory I/O band resemble common exchange
 regions and trunks connecting heterogeneous areas.
 
-Four logical processors are activity contexts inside two physical core regions;
-they are not four separate physical structures. A design that treats them as
-four independent body parts would misread the hardware.
+Four logical processors are interleaved activity contexts inside two physical
+core regions. Their shared physical substrate constrains any bodily analogy.
 
 ## Scale 3: package, memory, regulation, and logic board
 
@@ -92,8 +88,8 @@ The exact-model-family teardown shows:
 - a battery, speakers, camera, microphone, display, fan, heat sink, trackpad,
   and storage connected through board traces and cables.
 
-Much of the connection topology is hidden in internal board layers and cannot
-be read from surface photographs.
+Surface photographs reveal only part of the connection topology carried by
+internal board layers.
 
 ### Inference
 
@@ -103,9 +99,8 @@ regulation, timing, thermal removal, device controllers, and physical
 boundaries.
 
 Regulation is dispersed. Many small components maintain voltages, switch paths,
-measure conditions, and protect interfaces. The physical body therefore does
-not contain one obvious location that alone deserves the title of pump,
-integrator, or controller.
+measure conditions, and protect interfaces. Pumping, integration, and control
+therefore have several possible physical homes.
 
 ## Scale transition
 
@@ -122,13 +117,12 @@ fin and surrounding gate
 → battery, sensors, display, sound, storage, cooling, and enclosure
 ```
 
-The larger body is not a magnified version of the smaller one. New boundaries,
-shared pathways, asymmetries, and regulatory layers appear at every scale.
+Each larger level introduces new boundaries, shared pathways, asymmetries, and
+regulatory layers.
 
-Rillworld should therefore not expect one primitive repeated uniformly to
-become a body. It must permit repeated local units to combine into regions with
-different geometry and function, while shared media and boundary structures
-connect those regions.
+Rillworld therefore permits repeated local units to combine into regions with
+different geometry and function, connected through shared media and boundary
+structures.
 
 ## What this changed
 
@@ -148,10 +142,8 @@ The next design must consider:
 8. different organizational rules at different scales.
 
 Experiment 02 now begins conceptually at effective Level 0. Cache-line state is
-an accessible implementation surface rather than the candidate's first
-primitive. The planning-only trial asks whether local material-like state can
-produce boundary-controlled transfer geometry; no executable or upper-level
-hardware run is authorized.
+its accessible implementation surface. The planning-only trial asks whether
+local material-like state can produce boundary-controlled transfer geometry.
 
 ## Sources viewed
 

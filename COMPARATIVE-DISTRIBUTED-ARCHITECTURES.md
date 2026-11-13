@@ -13,9 +13,9 @@ This pass compares living architectures along the same functional dimensions:
 7. characteristic failure;
 8. design question contributed to Rillworld.
 
-The goal is not to select one organism as a blueprint. It is to identify
-physical possibilities that remain effective without a single central pump,
-brain, or fixed finished network.
+The goal is to identify physical possibilities that remain effective across
+distributed bodies, including bodies with several pumps, diffuse integration,
+or continually remodeling networks.
 
 ## Comparative matrix
 
@@ -43,9 +43,8 @@ transport system therefore can be pulled from a consuming boundary rather than
 pushed by a central actuator.
 
 Mature xylem conduits are reinforced structures that can conduct after their
-cells have completed development. Failure through cavitation or blockage does
-not require each damaged conduit to repair itself; the growing body may produce
-additional pathways.
+cells have completed development. After cavitation or blockage, the growing
+body may produce additional pathways around damaged conduits.
 
 Rillworld consequence: environmental loss, transformation, or demand at one
 boundary might create a gradient that reorganizes distant circulation.
@@ -78,8 +77,7 @@ tracks. The moving cargo drags the surrounding cytoplasm, generating coherent
 streaming that distributes other material.
 
 Rillworld consequence: transported structures may help generate the flow that
-carries additional structures. Pump and cargo need not be permanently separate
-classes.
+carries additional structures. Pump and cargo can remain fluid roles.
 
 ### Systemic waves
 
@@ -106,7 +104,7 @@ region while the larger network continues.
 Rillworld consequences:
 
 - circulation may directly reshape future topology;
-- local damage need not stop the whole network;
+- the larger network may continue around isolated local damage;
 - selective isolation and later reopening are possible;
 - several transport mechanisms may coexist in one connected medium;
 - inherited patterns may be distributed across a shared continuous interior.
@@ -126,12 +124,12 @@ and flush debris. Neighbor-to-neighbor chemical communication and, in some
 lineages, syncytial electrical conduction coordinate these responses.
 
 Rillworld consequence: many tiny local pumps can create body-scale circulation
-and protective flushing without one heart or brain.
+and protective flushing through distributed coordination.
 
 ### Hydra
 
-Hydra has diffuse ectodermal and endodermal nerve nets rather than a centralized
-brain. Distinct distributed subnetworks produce different electrical rhythms.
+Hydra has diffuse ectodermal and endodermal nerve nets. Distinct distributed
+subnetworks produce different electrical rhythms.
 Epithelial muscle layers also propagate excitation through gap junctions, and
 body mechanics transform those waves into contraction, elongation, bending,
 and locomotion.
@@ -150,15 +148,13 @@ Distributed pluripotent neoblasts support continuous cell turnover, growth,
 shrinkage, and regeneration. After amputation, remaining gut branches remodel
 to restore both function and global proportion.
 
-Rillworld consequence: repair may require whole-network reproportioning, not
-replacement of the missing local piece from a saved template.
+Rillworld consequence: repair may proceed through whole-network reproportioning.
 
 ### Brittle stars
 
 Brittle stars coordinate five similar arms through radial nerve cords connected
-by a circumoral ring. Complex movement does not require one permanent head-like
-controller; coordination depends on radial topology and changing relationships
-among arms.
+by a circumoral ring. Coordination depends on radial topology and changing
+relationships among arms.
 
 Rillworld consequence: repeated equivalent regions may negotiate temporary
 direction and coordination without assigning one region permanent leadership.
@@ -171,8 +167,7 @@ tracheoles directly toward tissues. Terminal tracheoles may be only 0.1–1 µm 
 diameter. The network grows and remodels with body size and oxygen demand.
 
 Rillworld consequence: selected resources may use direct branch delivery while
-other materials remain in the general medium. A single circulation need not
-carry every resource.
+other materials remain in the general medium.
 
 ## Combined requirements contributed to the candidate
 
@@ -193,8 +188,8 @@ The comparative pass adds these required possibilities:
 12. Repeated equivalent regions may coordinate without permanent leadership.
 13. Direct resource delivery may coexist with a general circulating medium.
 
-Experiment 02 should not proceed until its design can state which of these
-possibilities it preserves and which it deliberately excludes.
+Experiment 02 begins after its design states which of these possibilities it
+preserves and which it deliberately excludes.
 
 ## Sources
 

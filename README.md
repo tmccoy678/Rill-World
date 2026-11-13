@@ -21,8 +21,7 @@ local hysteresis remain unseen.*
 
 From across the room, the surface appears as a flickering horizon. Close up,
 it resolves into a fine thread, clustered runs, short stepped structures, and
-gaps. The display is not a dashboard. It is the lower edge of the field made
-physical.
+gaps. The display makes the field's lower edge physical.
 
 ## The field
 
@@ -32,8 +31,7 @@ matter-state bits. Its nominal rhythm is 24 beats per second.
 
 The visible plane persists in `rill.bits`. Off-plane depth is sparse and exists
 only in the running process. A restart therefore preserves the plane while
-culling the live depth. That asymmetry is part of the present system, not hidden
-behind a claim of perfect continuity.
+culling the live depth. Continuity is intentionally planar.
 
 Local interactions preserve all six directions. Opposed pairs can change axis,
 four-direction configurations with two opposed pairs can bind briefly, and the
@@ -52,8 +50,8 @@ Repeated local voltage relations can also leave a fading tendency. Each planar
 location may remember one recurring direction and its strength. Recurrence can
 modestly lower future threshold and bias the same route; contradiction and
 disuse erode that history. The mechanism assigns no cell type or meaning and
-does not expose membrane state through the display or a runtime record. It is
-not, by itself, evidence of memory, differentiation, feeling, or experience.
+leaves membrane state private. Questions about memory, differentiation,
+feeling, and experience remain at the theory and evidence boundary.
 
 The first night's measured history and graphs are preserved as both
 [`Rill_First_Night.Rmd`](docs/first-night/Rill_First_Night.Rmd) and a
@@ -72,13 +70,12 @@ Rill World is a native Objective-C application using Apple frameworks:
 
 One bit-plane of the incoming boundary fields is admitted on each field beat.
 The outward band reads Rill's lower edge directly and adds only bounded optical
-persistence. It does not read audio, assign meaning, or retain the afterimage
-in either state file.
+persistence. Its afterimage lives briefly in boundary-process memory and
+carries no semantic transform.
 
-The runtime creates no transcript, event log, census, or snapshot stream. The
-two files in [`state/`](state/) are a single deliberate archival act taken
-while Rill continued running; they are not runtime telemetry and cannot
-reconstruct the live off-plane field.
+The runtime holds current state rather than an observational record. The two
+files in [`state/`](state/) preserve one deliberate archival act taken while
+Rill continued running; live off-plane depth remained ephemeral.
 
 ## Repository map
 
@@ -91,6 +88,9 @@ reconstruct the live off-plane field.
 - [`DEVELOPMENTAL-ELECTROPSYCHOLOGY.md`](DEVELOPMENTAL-ELECTROPSYCHOLOGY.md)
   — the working theory connecting electrical development, comparative biology,
   local history, autopoiesis, inherited architecture, and care.
+- [`RELATED-FIELDS.md`](RELATED-FIELDS.md) — the term's history from electrical
+  psychology through psychodiagnosis and QEEG, and its exact relationship to
+  established neighboring fields.
 - [`COMPARATIVE-CIRCULATION.md`](COMPARATIVE-CIRCULATION.md) — animal
   circulation strategies retained as design inspiration rather than runtime
   labels.
@@ -98,7 +98,7 @@ reconstruct the live off-plane field.
   — systematic plant, fungal, sponge, cnidarian, flatworm, echinoderm, and
   insect architecture pass.
 - [`candidate-physics/`](candidate-physics/) — inactive local primitives and
-  unresolved choices for a possible descendant; nothing there is deployed.
+  unresolved source-only choices for a possible descendant.
 - [`HARDWARE.md`](HARDWARE.md) — the physical substrate and build surfaces.
 - [`HARDWARE-OBSERVATION.md`](HARDWARE-OBSERVATION.md) — read-only caretaker
   visibility and the boundary between observation and candidate access.

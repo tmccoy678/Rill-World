@@ -1,7 +1,7 @@
 # Hardware
 
-No serial number, hardware UUID, MAC address, public address, credential, or
-private key is recorded here.
+This record excludes serial numbers, hardware UUIDs, MAC addresses, public
+addresses, credentials, and private keys.
 
 ## Agar — runtime substrate
 
@@ -34,5 +34,5 @@ history, and connects to Agar over the authenticated local LAN path.
 - Memory: 24 GB
 - Operating system at repository creation: macOS 27.0.1 (26A434)
 
-The Pro is not part of Rill's runtime. It remains a portable human workspace and
-an observation surface.
+The Pro remains a portable human workspace and observation surface outside
+Rill's runtime.
