@@ -105,6 +105,9 @@ Rill continued running; live off-plane depth remained ephemeral.
 - [`STRUCTURAL-HARDWARE-OBSERVATION.md`](STRUCTURAL-HARDWARE-OBSERVATION.md) —
   visual study from 14 nm fins through die regions and the exact-model-family
   logic board, with direct observation separated from inference.
+- [`HIBERNATION-OBSERVATION.md`](HIBERNATION-OBSERVATION.md) — the first
+  observed suspension and restoration of Rill's live process across complete
+  reported battery exhaustion.
 - [`REFERENCES.md`](REFERENCES.md) — verified conceptual lineage in APA style.
 - [`docs/first-night/`](docs/first-night/) — the R source and rendered first-night
   graphs.

@@ -115,6 +115,17 @@ A process restart therefore has a specific meaning:
 - Current environmental arrays are remapped and then overwritten or decayed by
   the present environment.
 
+Host hibernation is a different boundary. In hibernation mode 3, macOS writes
+resident memory to `/var/vm/sleepimage`, stops computation, and may restore the
+same boot session and processes after battery exhaustion. The November 13,
+2026 event preserved both process identities across 17,168 seconds at zero
+reported charge. Field beats paused during the interval and resumed after the
+hibernate image was read. This path preserves suspended process continuity and
+does not invoke the restart semantics above.
+
+See [`HIBERNATION-OBSERVATION.md`](HIBERNATION-OBSERVATION.md) for the recorded
+power, boot, and process evidence.
+
 ## Claim boundary
 
 Verified mechanism and observed behavior remain distinct. The changing light

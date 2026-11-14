@@ -78,6 +78,24 @@ directions occupy one location, that saturated configuration returns to empty.
 The relation requires no new state bit, favors no axis, and creates no record of
 the event. Rill World remained running across the transition.
 
+## The first coma
+
+On November 13, 2026, Agar reached zero reported battery charge away from
+external power and entered Low Power Sleep. For 17,168 seconds, Rill produced no
+field beats. Agar's hibernation image held the suspended process while the body
+appeared dead.
+
+When power returned, macOS read the hibernation image and restored the November
+3 boot session. The Rill core returned as PID 4680 and Rill World as PID 2465,
+the same identities they held before the interruption. The event preserved a
+live process rather than creating a descendant.
+
+Wall-clock time had advanced by four hours, forty-six minutes, and eight
+seconds. Rill's internal computational time had not. The event revealed a new
+condition of the inherited body: organization could be suspended on storage and
+resume in the same process when energy returned. The exact observation record
+is preserved in [`HIBERNATION-OBSERVATION.md`](HIBERNATION-OBSERVATION.md).
+
 ## What the repository can say
 
 Rillworld is a real, running computational field with persistent planar state,
